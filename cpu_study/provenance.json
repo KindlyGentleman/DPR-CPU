@@ -1,0 +1,469 @@
+{
+  "upstream_commit": "1952ee743a4913f1ae5fd3ca51a006c53709e8ae",
+  "checkpoint_sha256": "823572aa0c4bc973acf149734b79833cb9fccf708aad23426373b8c62b5dc379",
+  "historical_environment": {
+    "platform": "Windows-11-10.0.22631-SP0",
+    "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+    "versions": {
+      "torch": "2.5.1",
+      "torchvision": "0.20.1",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.2.2",
+      "psutil": "6.0.0",
+      "onnx": null,
+      "onnxruntime": null,
+      "onnxscript": null,
+      "openvino": null,
+      "numba": "0.61.0",
+      "pyfftw": null,
+      "mkl_fft": null,
+      "SciencePlots": "2.1.1",
+      "pytest": null,
+      "py-cpuinfo": "9.0.0",
+      "threadpoolctl": "3.5.0"
+    }
+  },
+  "cpu": "Intel Core i7-13620H",
+  "intra_op": 4,
+  "inter_op": 1,
+  "sources": {
+    "baseline": {
+      "path": "experiments/exp00_baseline_t4_v1/summary.json",
+      "sha256": "4ef29eecaed756744643cd53f8404e6e797fe2a2c55a404c061a5ed925adab8b"
+    },
+    "stages": {
+      "path": "experiments/exp00_baseline_t4_v1/stage_profile.csv",
+      "sha256": "adfed5fcd27a7fac481f95c65a6b7f086139c8e5df84e38e6b1e184f70e541dd"
+    },
+    "exp01_wpc_pair_v2": {
+      "path": "experiments/exp01_wpc_pair_v2/summary.json",
+      "sha256": "0de0d996dd04f32859c6ee1b8dc8cb75b7948c82790cf975509d744d96575e7b"
+    },
+    "exp01_wpc_pair_v2_timings": {
+      "path": "experiments/exp01_wpc_pair_v2/latency_per_run.csv",
+      "sha256": "f8652d6a4f2a7558288abfb89f83e72eabe025747b10af19a343dd195d599ea5"
+    },
+    "exp04_layout_pair_v1": {
+      "path": "experiments/exp04_layout_pair_v1/summary.json",
+      "sha256": "72ae64fe8b8738b1f12feab169b4da7b43522060e70d533bef0e37937002b47a"
+    },
+    "exp04_layout_pair_v1_timings": {
+      "path": "experiments/exp04_layout_pair_v1/latency_per_run.csv",
+      "sha256": "d7c56b875f0654c81fb8e7aa3ba3d15ef11c41dbdb90fcff75c46309f29364f8"
+    },
+    "exp05_unpack_pair_v1": {
+      "path": "experiments/exp05_unpack_pair_v1/summary.json",
+      "sha256": "222ed983af215f0dd3509e1a8cb5cd5cf5ead1f6eb95eac6106cad38001d2283"
+    },
+    "exp05_unpack_pair_v1_timings": {
+      "path": "experiments/exp05_unpack_pair_v1/latency_per_run.csv",
+      "sha256": "86da74cff4d2e22cc9ba506006706b227f4d8429a0e0289789468d3f236ab118"
+    },
+    "exp06_lfu_pair_v1": {
+      "path": "experiments/exp06_lfu_pair_v1/summary.json",
+      "sha256": "0b8e5658c975e79c980a4d6cb6e81f222227aeef97aa52672a0d7426ebbd7d60"
+    },
+    "exp06_lfu_pair_v1_timings": {
+      "path": "experiments/exp06_lfu_pair_v1/latency_per_run.csv",
+      "sha256": "2263f4d5824fa72e54218453b89df2fa40b62f3c34598c0faad76b682716f514"
+    },
+    "exp08_projection_pair_v1": {
+      "path": "experiments/exp08_projection_pair_v1/summary.json",
+      "sha256": "300f8dde5e23cb4a047143018bf4c990b3f9f5f8787be6c2f2d87bef2e948cb1"
+    },
+    "exp08_projection_pair_v1_timings": {
+      "path": "experiments/exp08_projection_pair_v1/latency_per_run.csv",
+      "sha256": "7f07f49bea93f78c996bdca0f1680a19ac820b16aa2bca692cfc33f2697768d8"
+    },
+    "threads": {
+      "path": "artifacts/final_package_v3/thread_scaling.csv",
+      "sha256": "86bda5bcc8f95d23a7664e3a4e34268605e88bda0c6c325a007291c6eeb80ee8"
+    },
+    "final_summary": {
+      "path": "experiments/final570_reference_replay_v1/summary.json",
+      "sha256": "6b665684bf7ea6815bd7fa8a932a9203a6bfcd882ceed38faa649603c9660948"
+    },
+    "final_metrics": {
+      "path": "experiments/final570_reference_replay_v1/reconstruction_metrics.csv",
+      "sha256": "9add52b0ebe034764094c6e825c2570afffb4e63b3a04000510d0181ca7b086b"
+    },
+    "quantization": {
+      "path": "experiments/exp14_selective_int8_v1/summary.json",
+      "sha256": "b35a71ad9049cde8888c60810022e2ad65579ad53de843e8e8460dd5166a6621"
+    },
+    "fft": {
+      "path": "experiments/exp07_fft_backends_v1/fft_benchmark.csv",
+      "sha256": "4a8f4e905bcc37d126fb847b049738b4598213ba5fd11be826f38a34ee3a2f8f"
+    },
+    "example_0": {
+      "path": "experiments/final570_reference_replay_v1/gallery/b0012__corrected_p10000000_b16.npz",
+      "sha256": "f147b3479a1f8bdecc54d15b735a3fdab7672a3d054918287dc7282053f4cfe4"
+    },
+    "example_1": {
+      "path": "experiments/final570_reference_replay_v1/gallery/b0013__corrected_p10000_b48.npz",
+      "sha256": "085d1b647b2d21507b414427bbd4a0ce0c86213152f66c3669a7209b4159ac83"
+    },
+    "example_2": {
+      "path": "experiments/final570_reference_replay_v1/gallery/b0015__stress_2_random_gaps.npz",
+      "sha256": "674a0e99386e82a8899c343f0e81b58f965bcb4400f06f8847979f60969d1f2b"
+    },
+    "example_3": {
+      "path": "experiments/final570_reference_replay_v1/gallery/b0004__corrected_p1000000_b16.npz",
+      "sha256": "5b5acd862722e35c7102b8b9872a14171f41379a15be511b3a3dae176792de61"
+    },
+    "example_4": {
+      "path": "experiments/final570_reference_replay_v1/gallery/b0016__legacy_p10000_b48.npz",
+      "sha256": "3cf89376370a5f56d3c1a5d426a0f20a6da547517a556c2bfcf0e68aa8da9e14"
+    },
+    "quant_example": {
+      "path": "artifacts/reference_v1/b0006__corrected_p10000_b48.npz",
+      "sha256": "80c97f8502fcf2a080da4606d5663eba7896f5e977ff404935d81674af843918"
+    },
+    "quant_spectral": {
+      "path": "experiments/exp14_selective_int8_v1/predictions_spectral_convolutions_only.npz",
+      "sha256": "28f39750d997727a35de72c6a0453a6ddce97613482363a8ad5d3b842e42b73a"
+    },
+    "quant_spatial": {
+      "path": "experiments/exp14_selective_int8_v1/predictions_ordinary_spatial_1x1_only.npz",
+      "sha256": "b43cb25ac456334bfe94c7f2c5503e15fd93b9812530223ce763ab580a5675b5"
+    },
+    "exp03_fusion_pair_v2": {
+      "path": "experiments/exp03_fusion_pair_v2/summary.json",
+      "sha256": "9c59430490bea150f2364a7135730350cb71e848c0175870eae65b15b4fa076f"
+    },
+    "exp12_openvino_shift_v3": {
+      "path": "experiments/exp12_openvino_shift_v3/summary.json",
+      "sha256": "b65448adc57133ec332d4b356f2690dfa7f0b13f2e4423ff618fa9990f07aec1"
+    },
+    "gps": {
+      "path": "experiments/exp18_gps_threads_v1/summary.json",
+      "sha256": "7ea62bb780d6c37330ca6cf562d8af1f7b200a9c1ad0c172183f9db300e7eee4"
+    }
+  },
+  "paired_bootstrap": {
+    "WPC caching": {
+      "seed": 2026101501,
+      "draws": 2000,
+      "block_pairs": 6,
+      "experiment": "exp01_wpc_pair_v2",
+      "quality_gate": {
+        "alignment_changes": 0,
+        "allclose_all_samples": true,
+        "max_absolute_pixel_difference": 0,
+        "new_failures": 0,
+        "passed": true,
+        "worst_nrmse_increase": 9.020562075079397e-17,
+        "worst_ssim_drop": 1.1102230246251565e-16
+      },
+      "promoted": false
+    },
+    "Channels-last": {
+      "seed": 2026101501,
+      "draws": 2000,
+      "block_pairs": 6,
+      "experiment": "exp04_layout_pair_v1",
+      "quality_gate": {
+        "alignment_changes": 0,
+        "allclose_all_samples": true,
+        "max_absolute_pixel_difference": 1.710653305053711e-05,
+        "new_failures": 0,
+        "passed": true,
+        "worst_nrmse_increase": 2.168623885623333e-05,
+        "worst_ssim_drop": 6.27128069086158e-07
+      },
+      "promoted": false
+    },
+    "Complex unpack": {
+      "seed": 2026101501,
+      "draws": 2000,
+      "block_pairs": 6,
+      "experiment": "exp05_unpack_pair_v1",
+      "quality_gate": {
+        "alignment_changes": 0,
+        "allclose_all_samples": true,
+        "max_absolute_pixel_difference": 0,
+        "new_failures": 0,
+        "passed": true,
+        "worst_nrmse_increase": 9.020562075079397e-17,
+        "worst_ssim_drop": 1.1102230246251565e-16
+      },
+      "promoted": false
+    },
+    "LFU broadcast": {
+      "seed": 2026101501,
+      "draws": 2000,
+      "block_pairs": 6,
+      "experiment": "exp06_lfu_pair_v1",
+      "quality_gate": {
+        "alignment_changes": 0,
+        "allclose_all_samples": true,
+        "max_absolute_pixel_difference": 0,
+        "new_failures": 0,
+        "passed": true,
+        "worst_nrmse_increase": 9.020562075079397e-17,
+        "worst_ssim_drop": 1.1102230246251565e-16
+      },
+      "promoted": false
+    },
+    "Cartesian projection": {
+      "seed": 2026101501,
+      "draws": 2000,
+      "block_pairs": 6,
+      "experiment": "exp08_projection_pair_v1",
+      "quality_gate": {
+        "alignment_changes": 0,
+        "allclose_all_samples": true,
+        "max_absolute_pixel_difference": 8.597970008850098e-06,
+        "new_failures": 0,
+        "passed": true,
+        "worst_nrmse_increase": 2.970363821130917e-06,
+        "worst_ssim_drop": 1.0396450976779548e-06
+      },
+      "promoted": false
+    }
+  },
+  "base_bootstrap": {
+    "draws": 2000,
+    "seed": 2026101519,
+    "unit": "15 base-object means"
+  },
+  "cases": [
+    {
+      "base_id": 12,
+      "split": "test",
+      "family": "circle",
+      "simulator": "corrected",
+      "photons": 10000000.0,
+      "beamstop": 16,
+      "aligned_nrmse": 0.0371497357501904,
+      "aligned_ssim": 0.9673027374173798,
+      "failure": 0
+    },
+    {
+      "base_id": 13,
+      "split": "test",
+      "family": "ellipse",
+      "simulator": "corrected",
+      "photons": 10000.0,
+      "beamstop": 48,
+      "aligned_nrmse": 8.370115973299756,
+      "aligned_ssim": 0.359427120048562,
+      "failure": 1
+    },
+    {
+      "base_id": 15,
+      "split": "test",
+      "family": "core_shell",
+      "simulator": "corrected",
+      "photons": 1000000.0,
+      "beamstop": 16,
+      "aligned_nrmse": 0.1617765746450781,
+      "aligned_ssim": 0.9519282927032934,
+      "failure": 0
+    },
+    {
+      "base_id": 4,
+      "split": "ood",
+      "family": "multiple",
+      "simulator": "corrected",
+      "photons": 1000000.0,
+      "beamstop": 16,
+      "aligned_nrmse": 0.0435124189608146,
+      "aligned_ssim": 0.9907755198582612,
+      "failure": 0
+    },
+    {
+      "base_id": 16,
+      "split": "ood",
+      "family": "multiple",
+      "simulator": "legacy",
+      "photons": 10000.0,
+      "beamstop": 48,
+      "aligned_nrmse": 9.65167338168898,
+      "aligned_ssim": 0.3477690142646995,
+      "failure": 1
+    }
+  ],
+  "quantization_case": {
+    "base": {
+      "base_id": 6,
+      "family": "circle",
+      "object_seed": 20268078,
+      "split": "development"
+    },
+    "condition": {
+      "beamstop": 48,
+      "coherence": 200.0,
+      "condition_id": "corrected_p10000_b48",
+      "domain": "severe_low_photon_shift",
+      "gap_fraction": 0.0,
+      "gaussian_sigma": 0.42466090014400953,
+      "offset": [
+        0,
+        0
+      ],
+      "photons": 10000.0,
+      "simulator": "corrected",
+      "stress": "primary_grid",
+      "support_scale": 1.0
+    },
+    "file": "b0006__corrected_p10000_b48.npz",
+    "measurement_metadata": {
+      "beamstop": 48,
+      "clipped_observed_total": 45229.42454574072,
+      "coherence_pixels": 200.0,
+      "coherent_total_photons": 9999.999999999998,
+      "density_max": 0.7215059271060805,
+      "density_mean": 0.7215059271060804,
+      "density_min": 0.7215059271060805,
+      "density_std": 1.1102230246251565e-16,
+      "expected_observed_photons": 1330.789106509112,
+      "expected_photons": 10000.0,
+      "family": "circle",
+      "gap_fraction": 0.0,
+      "gaussian_sigma_photons": 0.42466090014400953,
+      "height": 31,
+      "intensity_scale": 9.641989717977951e-05,
+      "mask_seed": 20268155,
+      "negative_valid_fraction": 0.49719827586206894,
+      "noise_seed": 2280569389,
+      "object_seed": 20268078,
+      "offset": [
+        0,
+        0
+      ],
+      "oversampling_x": 16.516129032258064,
+      "oversampling_y": 16.516129032258064,
+      "poisson_sampled_photons": 9901,
+      "primary_amplitude_scale": 0.009819363379556717,
+      "primary_truth_convention": "common coherent-photon reference: density*sqrt(expected_photons/sum(coherent_unscaled))",
+      "sampled_signed_observed_total": 1436.473925064498,
+      "simulator": "corrected",
+      "support_fraction": 0.185546875,
+      "support_pixels": 760,
+      "support_scale": 1.0,
+      "target_convention": "upstream_returned_target: density*sqrt(intensity_scale)",
+      "upstream_target_amplitude_scale": 0.009819363379556717,
+      "valid_fraction": 0.9912109375,
+      "width": 31
+    },
+    "sample_id": "b0006__corrected_p10000_b48",
+    "sha256": "80c97f8502fcf2a080da4606d5663eba7896f5e977ff404935d81674af843918"
+  },
+  "fft": {
+    "shapes": [
+      "(1, 16, 32, 32)",
+      "(1, 128, 64, 64)",
+      "(1, 1, 512, 512)"
+    ],
+    "threads": 4,
+    "native": "native_call",
+    "bridge": "torch_bridge",
+    "interval": "5th to 95th empirical percentiles, not confidence intervals",
+    "precision": "NumPy native float64/complex128; its bridge casts to FP32/complex64. Other backends FP32/complex64.",
+    "parity_failure": "ORT forward detector 512x512 fails elementwise rtol=1e-4 / atol=1e-5; parity describes bridge output."
+  },
+  "display": {
+    "coordinates": "raw, no alignment or amplitude fitting",
+    "amplitude": "global PowerNorm gamma=0.5, vmin=0, vmax=max of all displayed truth/reference arrays",
+    "error": "absolute raw-coordinate error, one linear scale across the two main image rows",
+    "detector": "log10(1+max(intensity,0)); shared scale for the GIF, original signed arrays retained",
+    "resolution": "detector and mask 512x512; object 64x64; nearest-neighbor display"
+  },
+  "included_data_sha256": {
+    "examples.npz": "9f9c01a5d7486a8a8f7f7748c541967fe35ef5a46612588cbdc9090f0a90ccf2",
+    "final_metrics.csv": "c32830bf91933a9eef66c1b100cc43df2972e6773684e11edf5619e4d7945459",
+    "paired_timings.csv": "95acf062f0c4c54025b67144eedf811cb1281ab68ce0c316188f53219cf3bb86",
+    "results.csv": "fa768af6042fa90e5adf6f0b104c62dbffb5387be3a11db1f283183d45237c4f"
+  },
+  "artifact_validation": {
+    "date": "2026-10-16",
+    "styles": [
+      "science",
+      "ieee",
+      "no-latex"
+    ],
+    "font_adjustment": "DejaVu Serif provides consistent cross-platform serif text; every exported text span is 7, 8 or 10 pt. Decimal log ticks avoid small exponent glyphs.",
+    "figures": {
+      "figure_main": {
+        "png_pixels": [
+          4296,
+          3840
+        ],
+        "png_dpi": [
+          599.9988,
+          599.9988
+        ],
+        "pdf_inches": [
+          7.160000271267361,
+          6.399999830457899
+        ],
+        "font_sizes_pt": [
+          7.0,
+          8.0,
+          10.0
+        ],
+        "fonts_embedded": true,
+        "clipped_text": [],
+        "overlapping_words": [],
+        "png_sha256": "177c46037ea65fe05913c3151d235690e84d001410ec3cffae746376f273b53b",
+        "pdf_sha256": "4f566e35cd1b0c061fcc236c39d1e844b23c4c46cfac90fe7d3493a894d1adf5"
+      },
+      "figure_diagnostics": {
+        "png_pixels": [
+          4296,
+          2490
+        ],
+        "png_dpi": [
+          599.9988,
+          599.9988
+        ],
+        "pdf_inches": [
+          7.160000271267361,
+          4.149999830457899
+        ],
+        "font_sizes_pt": [
+          7.0,
+          8.0,
+          10.0
+        ],
+        "fonts_embedded": true,
+        "clipped_text": [],
+        "overlapping_words": [],
+        "png_sha256": "2dbda6fc460b465f4129b1d23592870c7a3fec618dc2acae18c0d0d3374535ef",
+        "pdf_sha256": "207b3587ad2beb7104f5095bb0d97d8b6d523fab6abfe210e7cd4ac06249fa98"
+      }
+    },
+    "gif": {
+      "frames": 5,
+      "loop": 0,
+      "durations_ms": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "pixels": [
+        1200,
+        408
+      ]
+    },
+    "visual_review": "PNG and separately rendered PDF pages inspected at publication width; all five GIF frames inspected; no remaining text clipping/overlap.",
+    "readme": "Browser render: embedded images loaded, no horizontal overflow.",
+    "cpu_smoke": "All five included cases reproduce stored outputs bitwise with original checkpoint, PyTorch2.5.1+cpu, 4 intra-op / 1 inter-op.",
+    "tests": {
+      "new_study_checks": 11,
+      "complete_suite": {
+        "passed": 25,
+        "skipped": 5,
+        "xfailed": 4,
+        "failed": 1
+      },
+      "known_failure": "network_synthetic: DPR0 seed21 relative L2 1.802e-5 and DPR1 seed22 1.866e-5 exceed original1e-5 legacy-reference bound. Identically reproduced against original1952ee7 source; no tolerance relaxation."
+    },
+    "installation": "README pinned PhaseRetrieval dependency and editable cpu-study/test extras installed successfully in Python3.12; every documented reproduction command executed successfully.",
+    "independent_review": "Read-only source/array/numerical review completed. Its local-only manifest dependency was removed and regression tested; the parity runner now raises on drift. No unresolved Critical/Important finding. CSV evidence bytes are preserved across Git checkouts with .gitattributes."
+  }
+}

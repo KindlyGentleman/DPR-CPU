@@ -4,3 +4,13 @@ __pycache__/
 build/
 dist/
 *.egg-info/
+.venv*/
+.pytest_cache/
+pytest-cache-files-*/
+.mplconfig/
+cpu_study/inference*.npz
+cpu_study/inference*.json
+*.tmp
+.env
+.env.*
+!.env.example
