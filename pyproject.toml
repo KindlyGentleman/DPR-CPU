@@ -35,6 +35,7 @@ dependencies = [
 [project.optional-dependencies]
 test = ["pytest"]
 notebook = ["matplotlib", "jupyterlab"]
+cpu-study = ["matplotlib==3.10.7", "SciencePlots==2.1.1", "pillow==11.3.0"]
 
 [project.urls]
 Repository = "https://github.com/sungyun98/DPR"

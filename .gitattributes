@@ -1,0 +1,2 @@
+# Preserve the exact archived evidence bytes used by provenance SHA-256 checks.
+cpu_study/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

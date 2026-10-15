@@ -1,123 +1,171 @@
-# Deep Phase Retrieval (DPR)
+# DPR-CPU
 
-> **Package renamed:** the package folder `module` is now `deeppr`. Please replace
-> `from module import ...` with `from deeppr import ...`. The phase retrieval algorithms are no
-> longer bundled with DPR; they come from the
-> [PhaseRetrieval](https://github.com/sungyun98/PhaseRetrieval) package
-> (`from phaseretrieval import PhaseRetrieval`). We apologize for the inconvenience to existing
-> users. The original code remains available at the tag `v1.0-legacy`.
+Deep Phase Retrieval (DPR) reconstructs a **64×64 physical-amplitude object** from a
+**512×512 diffraction-intensity pattern** and its valid-pixel mask. This fork of
+[Sung Yun Lee et al.'s DPR](https://github.com/sungyun98/DPR) preserves the original
+implementation and pretrained DPR1 checkpoint, and presents a completed CPU optimization
+study. **The original FP32 PyTorch model remains the selected exact and practical CPU
+deployment. No tested alternative qualified for promotion.**
 
-DPR is a deep neural network for direct phase retrievals of single-particle diffraction patterns
-from single-pulse coherent diffraction imaging experiments using X-ray free electron lasers. It
-reconstructs a 64 x 64 object from a 512 x 512 diffraction pattern with missing pixels, and the
-result can be refined by iterative phase retrieval.
+## Method
+
+The CPU pipeline masks and normalizes intensity, encodes it with weighted partial
+convolutions (WPC), applies fast Fourier convolution (FFC) and merging layers, projects
+the measured Fourier modulus, performs learned refinement, and restores physical flux.
+`True` means a valid detector pixel; `false_scale=False` returns physical amplitude.
+The checkpoint is unchanged (SHA-256 below).
+
+The baseline uses four intra-op and one inter-op thread, FP32 and persistent model reuse.
+Five exact candidates used matched inputs, ten warmups and 36 randomized timing pairs
+each, following fidelity checks on 18 measurements from seven development objects.
+Timing intervals use a paired circular moving-block bootstrap (2,000 draws, six-pair
+blocks). Promotion required ≥10% median latency reduction, a CI supporting improvement,
+≤5% p95 increase, numerical equivalence (`rtol=1e-4`, `atol=1e-5`), per-case NRMSE
+increase and SSIM loss ≤1e-4, no new failures, and acceptable resource evidence.
+Selection was locked before the final 570-measurement reference replay.
+
+## Results
+
+![Six-panel CPU study: convolution-heavy stages dominate, all exact candidate CIs include 1×, threading is descriptive, and genuine reconstructions expose original failures.](cpu_study/figure_main.png)
+
+**Figure 1.** (a) Disjoint diagnostic stage means ± sample SD over five bitwise-checked
+manual forwards; these are not the warmed deployment median, and nested FourierUnit
+times are not added. (b) WPC caching, channels-last layout, complex unpack, LFU broadcast
+and Cartesian projection: paired ratios of medians with stored 95% block-bootstrap CIs.
+The complete broad complex-unpack interval retains an unresolved slow period; every CI
+crosses 1×. (c) Sequential fresh-process thread screens, ten warmups/36 calls each;
+p95 is an empirical percentile, not uncertainty. The × marks the one-thread numerical
+gate failure. Six threads was nominally faster but its unpaired screen did not establish
+promotion; four is the selected configuration for this study. (d) Prespecified
+high-photon example. (e) The locked maximum-NRMSE case, an OOD multiple object at
+10⁴ photons with a 48-pixel beamstop. Images are native 64² arrays in raw coordinates,
+without registration or amplitude fitting: truth/reconstruction share one global
+gamma-0.5 amplitude mapping, and absolute raw-coordinate errors share a linear scale.
+The displayed metrics instead use evaluation alignment (integer translation/inversion,
+including outside-window energy, without amplitude fitting). (f) Equal-base-weighted
+means and 95% percentile CIs resampling **15 independent base objects**, each with
+38 conditions (10 test objects, five OOD). The 570 rows are dependent measurements.
+[Vector PDF](cpu_study/figure_main.pdf).
+
+| Historical measurement | Original FP32 DPR1 |
+| --- | ---: |
+| CPU / configuration | Intel Core i7-13620H; 4 intra-op / 1 inter-op |
+| Prepared-network median / p95 | 0.782155 / 0.959490 s |
+| Serial batch-one throughput (reciprocal median) | 1.2785 samples/s |
+| Single-model Windows lifetime peak working set | 0.840 GiB |
+| Final measurements / independent objects | 570 / 15 |
+| Original failures: aligned NRMSE >0.5 | 251/570 (44.0%) |
+| Accepted alternative | None |
+
+Prepared-network timing excludes checkpoint loading, input I/O, array conversion,
+serialization, optional iterative refinement and offline quality evaluation. These
+machine/session-specific historical results used Windows 11 and PyTorch 2.5.1+cpu.
+The final reference replay reproduced identical outputs; its timings are not an
+acceleration result. This study does not correct the original morphology failures.
+
+## Technical analysis
+
+[Figure 2 (PNG)](cpu_study/figure_diagnostics.png) · [Vector PDF](cpu_study/figure_diagnostics.pdf)
+
+**Figure 2.** (a) Completed four-thread real FFT cohorts at three representative DPR
+shapes: forward/inverse medians with empirical p5–p95 whiskers (not CIs); open markers
+are prepared native calls, filled markers include the Torch bridge. Feature transforms
+use `ortho`, detector transforms `backward` normalization. NumPy native arithmetic is
+float64/complex128; its bridge casts back to FP32/complex64. The × marks ORT's
+detector-forward bridge parity failure. Cohorts were sequential with 5–300 adaptive
+repetitions; kernel timings do not establish network speedups. (b) Rejected grouped
+INT8 variants: median PSNR losses 1.644/4.444 dB and SSIM losses 0.06494/0.32031
+(spectral/spatial 1×1), evaluated on 18 development measurements from seven objects.
+The two metrics have separate axes. (c) Genuine saved outputs for the fixed low-photon,
+large-beamstop development case `b0006__corrected_p10000_b48`; all four native 64²
+images share one gamma-0.5 amplitude scale, without alignment or fitting.
+
+FFC/merge and WPC dominate the disjoint profile. Other completed negative tests include
+Conv–BN fusion and full OpenVINO FP32 execution, both rejected by the strict numerical
+gate (maximum amplitude differences 2.18e-5 and 3.24e-5). A two-thread GPS-R refinement
+change produced a 0.939× complete-pipeline speed ratio [0.908, 1.001], on three
+development measurements from two independent objects, and was not promoted.
+Grouped INT8 results are development-only; no quantized end-to-end CPU speed is inferred.
+
+## Reconstruction
+
+![Five stored scientific cases loop through diffraction, valid detector mask, frozen DPR reconstruction and ground truth, including difficult failures.](cpu_study/reconstruction.gif)
+
+Five genuine synthetic cases from the locked evaluation, two seconds per case, loop
+indefinitely. Detector display uses `log10(1+max(I,0))` with shared limits; signed input
+arrays are retained. White mask pixels are valid. Reconstructions/truth share one global
+gamma-0.5 amplitude scale across all frames. Rendering uses nearest neighbors, no
+interpolation between cases, no model-iteration animation. Some original reconstructions
+fail badly on difficult inputs; these synthetic examples do not establish experimental validity.
 
 ## Installation
 
-DPR depends on the [PhaseRetrieval](https://github.com/sungyun98/PhaseRetrieval) package
-(`phaseretrieval`), which is not on PyPI; `requirements.txt` installs it from the default branch
-on GitHub. Clone the repository (the pretrained weights and the demo data are in it) and create
-the tested environment:
+Use Python 3.12 and a virtual environment. Clone this fork, then activate the environment
+(`.venv\Scripts\Activate.ps1` in PowerShell; `source .venv/bin/activate` on Linux/macOS).
 
 ```bash
-git clone https://github.com/sungyun98/DPR.git
-cd DPR
-conda env create -f environment.yml   # environment "deeppr"
-# or, in an existing environment:
-pip install -r requirements.txt && pip install -e .
+git clone https://github.com/KindlyGentleman/DPR-CPU.git
+cd DPR-CPU
+git switch feat/minimal-cpu-research
+python -m venv .venv
 ```
 
-To install only the packages into an environment that already has PyTorch and torchvision:
+After activation, install the CPU build and the original package with small plotting extras:
 
 ```bash
-pip install git+https://github.com/sungyun98/PhaseRetrieval.git
-pip install git+https://github.com/sungyun98/DPR.git
+python -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install numpy==1.26.4 scipy==1.13.1
+python -m pip install "phaseretrieval @ git+https://github.com/sungyun98/PhaseRetrieval.git@e844e4655af899b0bce5464cbfd32206962e977d"
+python -m pip install -e ".[cpu-study,test]"
 ```
 
-Tested with Python 3.12, PyTorch 2.14.0 and torchvision 0.29.0 (CUDA 12.6 builds), NumPy 2.5.3,
-SciPy 1.18.1, scikit-image 0.26.0, Pillow 12.3.0 and h5py 3.16.0; the exact versions are in
-`requirements.txt`. Minimum versions: Python 3.10, PyTorch 2.1, torchvision 0.16, NumPy 1.26,
-SciPy 1.11, scikit-image 0.20. The PyTorch builds in `requirements.txt` use CUDA 12.6 and run with
-NVIDIA drivers 525 or newer; replace `cu126` with `cpu` for a CPU-only installation.
+Upstream `requirements.txt` and `environment.yml` remain available. The upstream
+[demo notebook](demo.ipynb) includes the experimental pattern and optional GPS-R
+refinement. [Training](train.py), [data generation](generate_dataset.py) and
+[regression instructions](tests/regression/README.md) are retained. The current package
+is `deeppr`; the original `module` API remains in upstream tag `v1.0-legacy`.
 
-## Usage
+## Reproduction
 
-`demo.ipynb` reconstructs the measured pattern in `exp/`: it centres and crops the pattern,
-runs the network, and refines the result with GPS-R from `phaseretrieval`. The network alone, on
-a simulated pattern (run from the repository root):
-
-```python
-import torch
-
-from deeppr import GenerateDiffraction, Network
-
-model = Network(ngf=64, max_features=1024, weight_model=True, downsample_FFC=False, refinement=True)
-checkpoint = torch.load("pretrained/param_dpr1.pt", weights_only=True)
-model.load_state_dict(checkpoint["model_state_dict"])
-model.eval()
-
-# simulated pattern of a 40 x 32 pixel object (oversampling ratios 12.8 and 16)
-obj = torch.zeros(1, 1, 64, 64)
-obj[..., 12:52, 16:48] = 1
-intensity, target = GenerateDiffraction(obj, ph_ord=6)  # (1, 1, 512, 512), fftshifted
-mask = torch.ones_like(intensity, dtype=torch.bool)  # True for valid pixels
-mask[..., 244:268, 244:268] = False  # beam stop
-
-with torch.no_grad():
-    result = model(intensity * mask, mask)  # (1, 1, 64, 64)
-```
-
-Inputs are intensities in photon counts with the zero frequency at the centre, and the mask is
-True (or 1) for valid pixels. `pretrained/` holds two checkpoints, `param_dpr0.pt` and
-`param_dpr1.pt`; `demo.ipynb` uses `param_dpr1.pt`.
-
-To train the network, generate the datasets and run `train.py` with torchrun on one or more
-GPUs (the launch commands are in its docstring):
+Run from the repository root, in a fresh Python process:
 
 ```bash
-python generate_dataset.py train   # ./datasets/dataset_train_n96k.h5
-python generate_dataset.py valid   # ./datasets/dataset_valid_n12k.h5
-python generate_dataset.py test    # ./datasets/dataset_test_n12k.h5 (for evaluation)
-torchrun --standalone --nproc_per_node=4 train.py 600
+python cpu_study/reproduce.py --all
+python cpu_study/plot.py --figure main
+python cpu_study/plot.py --figure diagnostics
+python cpu_study/animate.py
+python -m pytest tests/test_cpu_study.py -q
 ```
 
-## Notes
+`reproduce.py` loads the unchanged checkpoint on CPU and checks fresh outputs against
+the archived examples. `--case 0` runs one case; `--output cpu_study/inference.npz`
+saves fresh outputs separately. These first-use calls are demonstrations, not warmed
+historical benchmarks. Plotting requires no model execution. Both figures load
+**SciencePlots `science`, `ieee`, `no-latex`**, use 7.16-inch canvases, and export
+600-dpi PNG plus PDF with embedded TrueType fonts. Array images retain native sampling;
+chart elements and text are vector in the PDF.
 
-1. The pretrained network is for the diffraction patterns with oversampling ratios in the range
-   of 10 to 20 along each axis and total diffracted intensities in the range of
-   10<sup>6</sup> to 10<sup>7</sup>.
+Checkpoint SHA-256: `823572aa0c4bc973acf149734b79833cb9fccf708aad23426373b8c62b5dc379`.
 
-2. Coefficients for the loss function might require to be adjusted for training datasets with
-   different conditions.
+## Reproducibility boundaries
 
-3. We used NVIDIA Irregular Mask Dataset from
-   https://research.nvidia.com/labs/adlr/publication/partialconv-inpainting. Please check the
-   file paths in `deeppr.dataset.IrregularMaskDataset` when using `generate_dataset.py`.
-   Other datasets, EMNIST and CIFAR-100, are from torchvision library.
+Included [summary values](cpu_study/results.csv), [paired timing rows](cpu_study/paired_timings.csv),
+[570 reference metric rows](cpu_study/final_metrics.csv), [native example arrays](cpu_study/examples.npz)
+and [source hashes, environment and transformations](cpu_study/provenance.json) regenerate
+the figures/GIF and permit replay of the paired timing and independent-base CIs.
+`results.csv` uses `low/high` for stage mean±SD, candidate/reliability 95% CIs, or FFT
+p5–p95 according to `section`; blank bounds mean no interval is supplied.
 
-4. Third-party code included in `deeppr` is listed in [License](#license).
+The complete historical study's raw manifests, all prediction arrays and alternative
+implementations are outside this minimal repository. The included subset supports
+reconstruction demonstrations and evidence inspection; it does not independently
+reproduce the full 570-measurement experiment or establish portability of its timings.
 
-## Reproducing the paper results
-
-The tag `v1.0-legacy` is the code used for the paper (Python 3.11.5, PyTorch 2.1.0, CUDA 11.8)
-and reproduces its results:
-
-```bash
-git checkout v1.0-legacy
-```
-
-`tests/regression/environment-legacy.yml` describes a CPU environment with these library
-versions. The regression tests in `tests/regression/` compare the current code with reference
-outputs of `v1.0-legacy`, including the pretrained networks and the `demo.ipynb` pipeline (see
-`tests/regression/README.md`). The results match within floating-point tolerance, except for
-two options of the phase retrieval code that the demo does not use: the NLL error metric with
-RAAR, which raised an IndexError, and ShrinkWrap, which now uses a centred Gaussian kernel.
-
-The partial-coherence model of `GenerateDiffraction` was corrected after the paper: the
-Gaussian Schell-model kernel is now applied at the zero lag of the autocorrelation, whereas
-`v1.0-legacy` centred it on the 512 x 512 grid, so that it weighted large lags more than small
-ones instead of blurring the pattern. The pretrained networks were trained on datasets from
-`v1.0-legacy`; datasets from the current `generate_dataset.py` differ from them.
+Validation: all five included inputs replay bitwise under PyTorch 2.5.1+cpu, and all
+eleven study checks pass. The upstream `network_synthetic` legacy-reference test exceeds
+its 1e-5 relative-L2 tolerance (1.802e-5 / 1.866e-5); the same failure reproduces on
+unchanged upstream source. Its tolerance is preserved. The complete suite reports
+25 passed, 5 skipped, 4 expected failures and this one pre-existing failure.
 
 ## Citation
 
@@ -142,9 +190,9 @@ When using DPR or weighted partial convolution, please cite:
 For the phase retrieval algorithms, please also cite the references of
 [PhaseRetrieval](https://github.com/sungyun98/PhaseRetrieval).
 
-## Contact
 
-Sung Yun Lee, sungyun98@g.postech.edu
+Scientific visualization/review workflow guidance: Kassis, Agarwal, He, Patel and Brueckner
+(2026), [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065).
 
 ## License
 

@@ -1,0 +1,98 @@
+section,name,metric,value,low,high,n,unit,source
+baseline,FP32 DPR1,median_seconds,0.7821548500069184,,,36,s,baseline
+baseline,FP32 DPR1,p95_seconds,0.9594902749886387,,,36,s,baseline
+baseline,FP32 DPR1,samples_per_second,1.2785192088128772,,,36,samples/s,baseline
+baseline,FP32 DPR1,peak_working_set_gib,0.8401679992675781,,,,GiB,baseline
+stage,normalization,diagnostic_mean,0.56665999582032,0.2496575489448449,0.8836624426957952,5,ms,stages
+stage,WPC_encoder,diagnostic_mean,201.42675999668418,179.80454347375493,223.04897651961343,5,ms,stages
+stage,FFC_main_and_merge,diagnostic_mean,558.5202599933837,528.8764180798004,588.1641019069668,5,ms,stages
+stage,modulus_projection,diagnostic_mean,7.41866001044394,5.685790878460072,9.151529142427808,5,ms,stages
+stage,DPR_refinement,diagnostic_mean,78.31706000724805,63.87120075956056,92.76291925493553,5,ms,stages
+stage,flux_scaling,diagnostic_mean,2.26824000710618,1.3392782343649667,3.1972017798473935,5,ms,stages
+candidate,WPC caching,paired_speedup,1.0065407983731895,0.9786034189744003,1.0520037929149362,36,ratio,exp01_wpc_pair_v2
+candidate,Channels-last,paired_speedup,0.981142074145523,0.9528683385899355,1.0284881967329915,36,ratio,exp04_layout_pair_v1
+candidate,Complex unpack,paired_speedup,1.109713554428554,0.9818253778767566,2.4897157054135852,36,ratio,exp05_unpack_pair_v1
+candidate,LFU broadcast,paired_speedup,1.0041487145541403,0.9908674426130083,1.0173828395710118,36,ratio,exp06_lfu_pair_v1
+candidate,Cartesian projection,paired_speedup,1.0135654519888844,0.9762974421803284,1.029983573413341,36,ratio,exp08_projection_pair_v1
+thread,1,median,2.0773251000064192,,,36,s,threads
+thread,1,p95,2.260082374988997,,,36,s,threads
+thread,2,median,0.9884408500074642,,,36,s,threads
+thread,2,p95,1.1169243499971344,,,36,s,threads
+thread,4,median,0.7821548500069184,,,36,s,threads
+thread,4,p95,0.9594902749886388,,,36,s,threads
+thread,6,median,0.7221870500070509,,,36,s,threads
+thread,6,p95,0.8496627750137122,,,36,s,threads
+thread,8,median,0.7882469499891158,,,36,s,threads
+thread,8,p95,0.8558044000092195,,,36,s,threads
+thread,10,median,0.8113047499791719,,,36,s,threads
+thread,10,p95,0.8786602750042221,,,36,s,threads
+reliability,Reference,aligned_nrmse,1.4979682521177111,1.4624619058243598,1.5398712369352694,15,unitless,final_summary
+reliability,Reference,aligned_ssim,0.7393325784388896,0.6926835988322512,0.776257922698241,15,unitless,final_summary
+reliability,Reference,failure,0.44035087719298244,0.40175438596491214,0.507017543859649,15,unitless,final_summary
+int8,spectral_convolutions_only,median_psnr_loss_db,1.643556279661829,,,18,dB,quantization
+int8,spectral_convolutions_only,median_ssim_loss,0.06493860244858002,,,18,unitless,quantization
+int8,ordinary_spatial_1x1_only,median_psnr_loss_db,4.444432786933764,,,18,dB,quantization
+int8,ordinary_spatial_1x1_only,median_ssim_loss,0.3203138347134733,,,18,unitless,quantization
+fft,"torch|forward|native_call|(1, 16, 32, 32)",median,0.0882500025909394,0.06639501079916954,0.5269799890811,300,ms,fft
+fft,"torch|inverse|native_call|(1, 16, 32, 32)",median,0.16440000035799998,0.1097000189474,0.9450650017242,300,ms,fft
+fft,"torch|forward|torch_bridge|(1, 16, 32, 32)",median,0.05940001574344933,0.05849997978657484,0.06351001647999512,300,ms,fft
+fft,"torch|inverse|torch_bridge|(1, 16, 32, 32)",median,0.11779999476849999,0.11540000559760001,0.2046550114755,300,ms,fft
+fft,"scipy|forward|native_call|(1, 16, 32, 32)",median,0.06699998630210757,0.050300004659220576,0.104855011159,300,ms,fft
+fft,"scipy|inverse|native_call|(1, 16, 32, 32)",median,0.07239999831654131,0.054800009820610285,0.1499600039096,300,ms,fft
+fft,"scipy|forward|torch_bridge|(1, 16, 32, 32)",median,0.06674999895039946,0.05289999535307288,0.10493498557480001,300,ms,fft
+fft,"scipy|inverse|torch_bridge|(1, 16, 32, 32)",median,0.05980001878924668,0.05860000965185464,0.06619998021051288,300,ms,fft
+fft,"fftw|forward|native_call|(1, 16, 32, 32)",median,0.04129999433644116,0.0405999890062958,0.09291500900872052,300,ms,fft
+fft,"fftw|inverse|native_call|(1, 16, 32, 32)",median,0.03579998156055808,0.035494980693329126,0.040704989805817625,300,ms,fft
+fft,"fftw|forward|torch_bridge|(1, 16, 32, 32)",median,0.06259999645408243,0.05170001386431977,0.09415998938493432,300,ms,fft
+fft,"fftw|inverse|torch_bridge|(1, 16, 32, 32)",median,0.05199998850002885,0.05129998316988349,0.08181001176126301,300,ms,fft
+fft,"numpy|forward|native_call|(1, 16, 32, 32)",median,0.22495001030620002,0.16014999710019998,0.3485550041659,300,ms,fft
+fft,"numpy|inverse|native_call|(1, 16, 32, 32)",median,0.1506999979028,0.1480949940741,0.1830899898777,300,ms,fft
+fft,"numpy|forward|torch_bridge|(1, 16, 32, 32)",median,0.26684999465939996,0.1512000148068,0.3223950086976,300,ms,fft
+fft,"numpy|inverse|torch_bridge|(1, 16, 32, 32)",median,0.1747000060277,0.16490000271,0.2808350138366,300,ms,fft
+fft,"ort|forward|native_call|(1, 16, 32, 32)",median,1.2969999952474,1.25246499083,1.727324994863,280,ms,fft
+fft,"ort|inverse|native_call|(1, 16, 32, 32)",median,1.6652000194881,1.6266200080281,3.2810900011099,147,ms,fft
+fft,"ort|forward|torch_bridge|(1, 16, 32, 32)",median,1.2988500093342,1.2571999977808,1.7828050040407,268,ms,fft
+fft,"ort|inverse|torch_bridge|(1, 16, 32, 32)",median,1.6910000122152,1.6271399916149,2.0960800116881,213,ms,fft
+fft,"numpy|forward|native_call|(1, 128, 64, 64)",median,6.5078999905381,5.551379994722,10.9775300050387,47,ms,fft
+fft,"numpy|inverse|native_call|(1, 128, 64, 64)",median,6.9714999990537,6.2914599940995,10.8986850013025,54,ms,fft
+fft,"numpy|forward|torch_bridge|(1, 128, 64, 64)",median,6.9686000060755,6.1378899990813,11.154670009273099,35,ms,fft
+fft,"numpy|inverse|torch_bridge|(1, 128, 64, 64)",median,9.0016000031027,7.4236999993445005,15.0262199909775,44,ms,fft
+fft,"scipy|forward|native_call|(1, 128, 64, 64)",median,1.5874500095378001,1.4424849825444999,2.7395650118705,214,ms,fft
+fft,"scipy|inverse|native_call|(1, 128, 64, 64)",median,2.5906000228133,2.055600011954,4.1962000017520005,89,ms,fft
+fft,"scipy|forward|torch_bridge|(1, 128, 64, 64)",median,1.6215000068768,1.5407000028062001,2.9981999832671002,201,ms,fft
+fft,"scipy|inverse|torch_bridge|(1, 128, 64, 64)",median,2.2293000074569003,2.0539000019198,3.7219100107904,167,ms,fft
+fft,"ort|forward|native_call|(1, 128, 64, 64)",median,58.585249993484396,46.8816500215325,67.0789499999955,6,ms,fft
+fft,"ort|inverse|native_call|(1, 128, 64, 64)",median,66.9428000110201,46.5740799903869,76.0520600015297,5,ms,fft
+fft,"ort|forward|torch_bridge|(1, 128, 64, 64)",median,39.294550020713295,38.9641150002717,40.4703000109293,8,ms,fft
+fft,"ort|inverse|torch_bridge|(1, 128, 64, 64)",median,46.895900013623695,43.9115900051547,67.0765599934384,7,ms,fft
+fft,"fftw|forward|native_call|(1, 128, 64, 64)",median,0.47605000145259996,0.4171650041826,0.6376800214638,300,ms,fft
+fft,"fftw|inverse|native_call|(1, 128, 64, 64)",median,0.42029999895020004,0.39140001172190003,0.5781400061096,300,ms,fft
+fft,"fftw|forward|torch_bridge|(1, 128, 64, 64)",median,0.9875999967334,0.8936699916375,1.1420199967687001,292,ms,fft
+fft,"fftw|inverse|torch_bridge|(1, 128, 64, 64)",median,1.1440999951446,0.8851750171743,2.5388949739863,300,ms,fft
+fft,"torch|forward|native_call|(1, 128, 64, 64)",median,0.3203999949619,0.3167999966535,0.38575499784199996,300,ms,fft
+fft,"torch|inverse|native_call|(1, 128, 64, 64)",median,0.5303999932948,0.4460949916392,0.8175450217095,300,ms,fft
+fft,"torch|forward|torch_bridge|(1, 128, 64, 64)",median,0.1961499947356,0.19310001516710001,0.3416200110223,300,ms,fft
+fft,"torch|inverse|torch_bridge|(1, 128, 64, 64)",median,0.4612500051734,0.4431999986991,0.8083700115093,300,ms,fft
+fft,"torch|forward|native_call|(1, 1, 512, 512)",median,0.2099499979522,0.1943999959621,0.538959998812,300,ms,fft
+fft,"torch|inverse|native_call|(1, 1, 512, 512)",median,0.26600000273900004,0.2624949906021,0.4148099877056,300,ms,fft
+fft,"torch|forward|torch_bridge|(1, 1, 512, 512)",median,0.20539999241,0.19639498350440002,0.2844799833837,300,ms,fft
+fft,"torch|inverse|torch_bridge|(1, 1, 512, 512)",median,0.2737500035436,0.2675950003322,0.5344249933841001,300,ms,fft
+fft,"fftw|forward|native_call|(1, 1, 512, 512)",median,0.310300005367,0.258499989286,0.4504999931668,300,ms,fft
+fft,"fftw|inverse|native_call|(1, 1, 512, 512)",median,0.2817999920807,0.2653000105055,0.3652000144938,300,ms,fft
+fft,"fftw|forward|torch_bridge|(1, 1, 512, 512)",median,0.7943999953567,0.652024988085,0.9122400180785,300,ms,fft
+fft,"fftw|inverse|torch_bridge|(1, 1, 512, 512)",median,0.8271999977296001,0.6671599883702,0.9211749988025,300,ms,fft
+fft,"ort|forward|native_call|(1, 1, 512, 512)",median,22.2959000093396,20.7943900109967,29.6944700035965,15,ms,fft
+fft,"ort|inverse|native_call|(1, 1, 512, 512)",median,33.065800002077495,25.0421199889387,44.7465400095097,13,ms,fft
+fft,"ort|forward|torch_bridge|(1, 1, 512, 512)",median,24.333800014574003,21.481919990037497,33.527889996184896,15,ms,fft
+fft,"ort|inverse|torch_bridge|(1, 1, 512, 512)",median,25.1623000076506,24.4739999994635,37.4735599965788,13,ms,fft
+fft,"numpy|forward|native_call|(1, 1, 512, 512)",median,3.143000009004,2.9144600091967,5.5085200059693,105,ms,fft
+fft,"numpy|inverse|native_call|(1, 1, 512, 512)",median,3.7780999991809,3.6370100060593997,6.7360200046095,94,ms,fft
+fft,"numpy|forward|torch_bridge|(1, 1, 512, 512)",median,3.3308500132989,3.2196000101976003,5.8510000089881,106,ms,fft
+fft,"numpy|inverse|torch_bridge|(1, 1, 512, 512)",median,4.0909499948610994,4.001274988695499,5.499575017893201,46,ms,fft
+fft,"scipy|forward|native_call|(1, 1, 512, 512)",median,0.9460500004933999,0.8852899889461,1.7631599796004,300,ms,fft
+fft,"scipy|inverse|native_call|(1, 1, 512, 512)",median,1.2147999950684,1.1579399986657999,2.2286499908659,87,ms,fft
+fft,"scipy|forward|torch_bridge|(1, 1, 512, 512)",median,0.9718000073917,0.9143549788859,1.8548449996160001,300,ms,fft
+fft,"scipy|inverse|torch_bridge|(1, 1, 512, 512)",median,1.4996499958215,1.1991750172455,2.4205649839132,184,ms,fft
+rejected,Conv-BN fusion,max_abs_difference,2.181902527809143e-05,,,,amplitude,exp03_fusion_pair_v2
+rejected,OpenVINO FP32,max_abs_difference,3.236532211303711e-05,,,,amplitude,exp12_openvino_shift_v3
+rejected,GPS thread change,paired_pipeline_speedup,0.9385145425245728,0.9081198038014069,1.0008053352058717,36,ratio,gps
