@@ -1,0 +1,28 @@
+{
+  "removed_bytes": 1061641,
+  "removed_files": 108,
+  "checkout": "original research checkout",
+  "removed_paths_relative_to_checkout": [
+    ".pytest_cache",
+    "cpu_optimization/__pycache__",
+    "cpu_optimization/benchmarks/__pycache__",
+    "cpu_optimization/candidates/__pycache__",
+    "cpu_optimization/fft/__pycache__",
+    "cpu_optimization/phase2_extension/__pycache__",
+    "cpu_optimization/scripts/__pycache__",
+    "cpu_optimization/tests/__pycache__",
+    "cpu_study/__pycache__",
+    "deeppr/__pycache__",
+    "tests/__pycache__",
+    "tests/regression/__pycache__",
+    "tests/regression/adapters/__pycache__"
+  ],
+  "all_removed_files_untracked_and_ignored": true,
+  "protected_local_files_unchanged": 947,
+  "external_native_cache_retained": {
+    "files": 431,
+    "bytes": 12792176,
+    "hash_inventory_verified": true
+  },
+  "full_local_cleanup_record_sha256": "15ccf74cd831b5d054857b9869d632bf082d1a6170f571a3eb5b4e8c986389b2"
+}

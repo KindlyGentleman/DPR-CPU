@@ -57,7 +57,7 @@ warmup; v5 is not a cold compilation measurement.
 The saved `profile_v2` contains three instrumented forwards after ten warmups,
 with bitwise instrumented output agreement. Operator self CPU time totals
 2,415,575 μs. The repeated `[1,256,66,66]` input / `[256,256,3,3]` MKLDNN group
-accounts for 1,029,147.4 μs, or 42.6046%; FFT kernel self-time is 2.28827%.
+accounts for 1,029,147.4 μs, or 42.6047%; FFT kernel self-time is 2.28827%.
 The remaining share is 55.1071%. WPC/FFC include substantial spatial convolution;
 the name FFC does not mean its full stage time is FFT work. Inclusive scopes
 overlap operator calls and are not added to these percentages.
