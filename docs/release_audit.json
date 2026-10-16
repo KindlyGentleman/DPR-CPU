@@ -374,5 +374,21 @@
     "bytes_checked": 249761094,
     "mismatches": []
   },
-  "publication_note": "Audit ran before its verification commit; tested Python/TOML source hashes bind the executed implementation. Final clean checkout/Git state is checked separately."
+  "publication_note": "Audit ran before its verification commit; tested Python/TOML source hashes bind the executed implementation. Final clean checkout/Git state is checked separately.",
+  "post_publication_index_verification": {
+    "passed": true,
+    "scoped_test_summary": "151 passed in 20.67s",
+    "index_evidence_bytes": {
+      "passed": true,
+      "details": {
+        "indexed_source_records_checked": 22,
+        "mismatches": []
+      }
+    },
+    "final_audit_source_sha256": {
+      "scripts/release_audit.py": "0715daf31d0ef05af35c32d21d73e05dd06fcfd05b89e27e88abc35cd7ef07bc",
+      "tests/test_publication.py": "968c0874754e3e98d0a53e363d98d621833dfda17d9d9bf9a5da2adfe06f5460"
+    },
+    "scope": "After a fresh-checkout check exposed prior Git EOL normalization, the index was restored to byte-preserved original evidence. Only line endings changed in archived data. An additional regression test verifies Git-index byte integrity. Full model/figure checks above preceded this final index check; scientific values and plotting code are unchanged."
+  }
 }

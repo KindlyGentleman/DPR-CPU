@@ -36,6 +36,15 @@ def readme_links(root):
     return [link for link in links if not re.match(r'[a-z]+:|#',link)
             and not (root/unquote(link.split('#')[0])).exists()]
 
+def index_source_mismatches(root,sources):
+    mismatches=[]
+    for name,expected in sources.items():
+        try:
+            blob=subprocess.check_output(['git','show',':'+name],cwd=root,stderr=subprocess.DEVNULL)
+            if hashlib.sha256(blob).hexdigest()!=expected:mismatches.append(name)
+        except subprocess.CalledProcessError:mismatches.append(name)
+    return mismatches
+
 def run(command,cwd,env=None,timeout=240):
     result=subprocess.run(command,cwd=cwd,env=env,text=True,capture_output=True,timeout=timeout)
     return {'exit_code':result.returncode,'output':result.stdout+result.stderr}
@@ -133,6 +142,13 @@ def audit(output,verify=False,require_clean=False):
         return {'source_records':len(manifest['sources']),'paired_experiments':rows,'profile':profile,
                 'unavailable_archive_references':'Original campaign/source ZIP hashes identify preserved local records; not all are public.'}
     check('manifest_statistics_quality',sources)
+    def indexed_evidence():
+        manifest=json.loads((ROOT/'cpu_study/evidence/manifest.json').read_text())
+        expected={'cpu_study/evidence/'+name:record['sha256'] for name,record in manifest['sources'].items()}
+        mismatches=index_source_mismatches(ROOT,expected)
+        assert not mismatches,{'git_index_source_hash_mismatches':mismatches}
+        return {'indexed_source_records_checked':len(expected),'mismatches':mismatches}
+    check('git_index_evidence_bytes',indexed_evidence)
     def convolution_replay():
         from cpu_optimization.statistics import paired_summary
         folder=ROOT/'cpu_study/evidence/results/phase2_convs_20261016_v3'

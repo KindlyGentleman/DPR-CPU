@@ -69,3 +69,13 @@ def test_release_audit_refuses_optimized_python(tmp_path):
     result=subprocess.run([sys.executable,'-O',str(ROOT/'scripts/release_audit.py'),
                            '--output',str(tmp_path/'audit')],capture_output=True,text=True)
     assert result.returncode!=0 and 'optimized Python' in result.stdout+result.stderr
+
+def test_audit_rejects_git_index_line_ending_conversion(tmp_path):
+    import hashlib,subprocess
+    audit=load_script('release_audit',ROOT/'scripts/release_audit.py')
+    subprocess.run(['git','init','-q',str(tmp_path)],check=True)
+    (tmp_path/'.gitattributes').write_text('evidence.csv text eol=lf\n')
+    data=b'paired,timing\r\n1,0.7\r\n'
+    (tmp_path/'evidence.csv').write_bytes(data)
+    subprocess.run(['git','-C',str(tmp_path),'add','evidence.csv'],check=True,capture_output=True)
+    assert audit.index_source_mismatches(tmp_path,{'evidence.csv':hashlib.sha256(data).hexdigest()})==['evidence.csv']

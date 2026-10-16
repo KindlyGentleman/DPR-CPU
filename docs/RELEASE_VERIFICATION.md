@@ -7,7 +7,7 @@ reproduction and release integrity; it is not independent scientific validation.
 | Check | Observed result |
 | --- | --- |
 | Integrated historical CPU/study suite | 134 passed |
-| Final scoped suite including release/cleanup checks | **150 passed** (134 existing + 16 new) |
+| Final scoped suite including release/cleanup checks | **151 passed** (134 existing + 17 new) |
 | Separate original regression suite | 14 passed, 5 skipped, 4 xfailed, 1 known inherited failure |
 | Five original archived DPR1 examples | Bitwise identical under PyTorch 2.5.1+cpu |
 | Installed wheel, outside-checkout CPU inference | Finite owned 64×64 FP32; archived case bitwise identical |
@@ -48,3 +48,10 @@ The final audit ran before its verification commit; the report's source hashes
 bind tested Python/TOML content. Final Git/clean-checkout state is checked after
 committing. [Cache cleanup details](CACHE_CLEANUP.json) use checkout-relative paths;
 the exact local path inventory and byte-preserved evidence backup remain local.
+
+A final fresh Git checkout exposed index normalization that predated archive
+attributes. The corrected commit restores original archived bytes (line endings
+only), adds a Git-index source-hash gate and regression test, and passes 151 scoped
+tests plus all compact static/data checks. The machine report retains the earlier
+full-execution source hashes and records the subsequent index/audit source checks
+separately; no scientific value or plotting implementation changed.
