@@ -1,0 +1,96 @@
+{
+  "source_manifest_sha256": "b6f0ae15d628556c7d40508f3ed9972bf6f2402b920bdf32b6ac417200d5681e",
+  "cases": [
+    {
+      "sample_id": "b0006__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0006__corrected_p1000000_b16.npz",
+      "sha256": "6372b2fdb1c8211fbaa43cefbfe8824383d69decfcb30a75fb65547a85f5e5fb"
+    },
+    {
+      "sample_id": "b0006__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0006__corrected_p10000_b48.npz",
+      "sha256": "80c97f8502fcf2a080da4606d5663eba7896f5e977ff404935d81674af843918"
+    },
+    {
+      "sample_id": "b0007__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0007__corrected_p1000000_b16.npz",
+      "sha256": "e584d7b3d79be2b2066b5acb99c489477464ebddb79088bdfea14844e4889077"
+    },
+    {
+      "sample_id": "b0007__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0007__corrected_p10000_b48.npz",
+      "sha256": "55a20f55ef35ffd7e012991934cdb115db0d98e969d3521a43d90f82c03dcc43"
+    },
+    {
+      "sample_id": "b0008__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0008__corrected_p1000000_b16.npz",
+      "sha256": "a32c0699911f949eb9d49b088e396c9be5ef7251f44803c8e2ddfe8d5884dd33"
+    },
+    {
+      "sample_id": "b0008__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0008__corrected_p10000_b48.npz",
+      "sha256": "de250f5c0bb5a32238e33e0877db7133dbb3797b5246766842d28cbd3dfed0d1"
+    },
+    {
+      "sample_id": "b0009__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0009__corrected_p1000000_b16.npz",
+      "sha256": "4ed6998a790836b798a6b1e7d4b251e7c30aa02cb0a3229818886eb44fe7a7f9"
+    },
+    {
+      "sample_id": "b0009__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0009__corrected_p10000_b48.npz",
+      "sha256": "045b5e203f8dc6ee1a9cf1d46ed57520f4c64de0c5ca68f68de14625f8e58658"
+    },
+    {
+      "sample_id": "b0011__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0011__corrected_p1000000_b16.npz",
+      "sha256": "64803e415783b901acd6c8a5f471cbc7f7d3853a60813c37bedcef3e60ecc2a5"
+    },
+    {
+      "sample_id": "b0011__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0011__corrected_p10000_b48.npz",
+      "sha256": "8e8b0e6b110d5b341738ce031c8b0e9b899b6498222a660dfa473629de292aea"
+    },
+    {
+      "sample_id": "b0030__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0030__corrected_p1000000_b16.npz",
+      "sha256": "cf873c1099c1fad8e7cecd598c3b51277bdfe89662e9c41f51937affb7cc81ca"
+    },
+    {
+      "sample_id": "b0030__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0030__corrected_p10000_b48.npz",
+      "sha256": "f1c8bd28e26773b192f34cf8c54252cf47fd786e1ac54a5428e414b4376c3d68"
+    },
+    {
+      "sample_id": "b0031__corrected_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0031__corrected_p1000000_b16.npz",
+      "sha256": "2c63a2ff9e0c59b424ea82aba7f0252395dfe2f8ea26dc5c37b2cb86aad726d1"
+    },
+    {
+      "sample_id": "b0031__corrected_p10000_b48",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0031__corrected_p10000_b48.npz",
+      "sha256": "8fe6fac8ba23375a71568a8e5266f4077adcf8ab90db81586b3c77046f0266db"
+    },
+    {
+      "sample_id": "b0006__corrected_p10000000_b0",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0006__corrected_p10000000_b0.npz",
+      "sha256": "def0915acf0211c83dffdda594ecb37a194230a374995482a40bb0ed7486adfd"
+    },
+    {
+      "sample_id": "b0007__corrected_p100000_b32",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0007__corrected_p100000_b32.npz",
+      "sha256": "3a23fdedf2eddfaf4e8beed6a0891af05fd86d60de719fadcb6ee47abdf727fa"
+    },
+    {
+      "sample_id": "b0008__stress_2_random_gaps",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0008__stress_2_random_gaps.npz",
+      "sha256": "7b1c0c239fd90facbf8671b0aa19b1bd5e86f0576f48b0dd50de6f07067e36e3"
+    },
+    {
+      "sample_id": "b0009__legacy_p1000000_b16",
+      "source": "D:\\03_Proyek\\Diffraction Research\\dpr-research\\cpu_optimization\\artifacts\\reference_v1\\b0009__legacy_p1000000_b16.npz",
+      "sha256": "4a8a32e37a6c9f1272a71fc672677baeae0b753534e26edf5fb1d3ff35674c34"
+    }
+  ],
+  "bundle_sha256": "f854d9b772fd5c3ff1ad8e4972b31130f2a6b12b48d35c6c3befab887d71aae2"
+}

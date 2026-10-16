@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "reason": "Primitive-only randomized paired microbenchmarks; no full-model promotion",
+  "unique_shapes": 36,
+  "measured_shapes": 36,
+  "warmups": 10,
+  "repeats": 36,
+  "wall_s": 100.45057590003125,
+  "boundary": "forward inference, fixed input/weights, prototype transforms/tiling/reassembly included; frozen weight setup separate",
+  "memory_scope": "sampled RSS across primitives; not isolated candidate/reference full-model peak",
+  "candidate": "phase2_convolution_primitives",
+  "track": "E"
+}

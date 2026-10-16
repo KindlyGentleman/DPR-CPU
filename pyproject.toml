@@ -36,13 +36,21 @@ dependencies = [
 test = ["pytest"]
 notebook = ["matplotlib", "jupyterlab"]
 cpu-study = ["matplotlib==3.10.7", "SciencePlots==2.1.1", "pillow==11.3.0"]
+cpu-optimization = ["psutil>=6", "matplotlib", "SciencePlots>=2.1"]
+cpu-fft = ["pyFFTW>=0.15"]
 
 [project.urls]
-Repository = "https://github.com/sungyun98/DPR"
+Repository = "https://github.com/KindlyGentleman/DPR-CPU"
+Upstream = "https://github.com/sungyun98/DPR"
 Paper = "https://doi.org/10.1038/s41524-025-01569-7"
 
-[tool.setuptools]
-packages = ["deeppr"]
+[tool.setuptools.packages.find]
+namespaces = false
+include = ["deeppr*", "cpu_optimization*"]
+exclude = ["cpu_optimization.tests*"]
+
+[tool.setuptools.package-data]
+cpu_optimization = ["config/*.json", "config/*.npz", "THIRD_PARTY_NOTICES.md", "README.md", "REPRODUCIBILITY.md", "SELECTED_CONFIGURATION.md"]
 
 [tool.ruff]
 line-length = 100

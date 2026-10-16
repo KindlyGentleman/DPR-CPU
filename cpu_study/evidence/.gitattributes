@@ -1,0 +1,2 @@
+# Archive bytes are hash-addressed scientific evidence, including JSON/CSV newlines.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,1211 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "sample_id": "b0006__corrected_p1000000_b16",
+      "base_id": 6,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 6.109476089477539e-07,
+        "max_relative": 4.795942702487458e-05,
+        "relative_l2": 5.389679645746767e-07,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.16949361945118033,
+        "aligned_ssim": 0.9492781034099623,
+        "aligned_psnr": 22.73239647827669,
+        "failure": 0,
+        "raw_nrmse": 0.7192833281558559,
+        "support_iou": 0.9741935483870968,
+        "boundary_f1": 0.9431818181818181,
+        "dy": 0,
+        "dx": 6,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 0.169493473776276,
+        "aligned_ssim": 0.9492781678526536,
+        "aligned_psnr": 22.732403943552907,
+        "failure": 0,
+        "raw_nrmse": 0.719283302833536,
+        "support_iou": 0.9741935483870968,
+        "boundary_f1": 0.9431818181818181,
+        "dy": 0,
+        "dx": 6,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.30610186382163806,
+        "valid_flux_relative_error": 7.773532292454197e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.3061018505453621,
+        "valid_flux_relative_error": 2.1610696295357855e-09
+      },
+      "nrmse_increase": -1.4567490433381458e-07,
+      "ssim_loss": -6.444269129435298e-08,
+      "psnr_loss": -7.465276215867789e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0006__corrected_p10000_b48",
+      "base_id": 6,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.996755599975586e-06,
+        "max_relative": 9.839960791853407e-05,
+        "relative_l2": 2.5097520894732613e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 8.259670637065259,
+        "aligned_ssim": 0.38371858282834576,
+        "aligned_psnr": -11.023791037583798,
+        "failure": 1,
+        "raw_nrmse": 8.399508164951362,
+        "support_iou": 0.495114006514658,
+        "boundary_f1": 0.0772200772200772,
+        "dy": -2,
+        "dx": -5,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 8.259668904176356,
+        "aligned_ssim": 0.38371843655032606,
+        "aligned_psnr": -11.023789215273446,
+        "failure": 1,
+        "raw_nrmse": 8.399506291828628,
+        "support_iou": 0.495114006514658,
+        "boundary_f1": 0.0772200772200772,
+        "dy": -2,
+        "dx": -5,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.1278524043159908,
+        "valid_flux_relative_error": 2.813939395204516e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.1278519595849108,
+        "valid_flux_relative_error": 2.0097364164451119e-07
+      },
+      "nrmse_increase": -1.7328889025947092e-06,
+      "ssim_loss": 1.4627801969702148e-07,
+      "psnr_loss": -1.8223103523951067e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0007__corrected_p1000000_b16",
+      "base_id": 7,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.5683472156524658e-06,
+        "max_relative": 6.562307294054022e-05,
+        "relative_l2": 1.2064803632379845e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.09803159591151565,
+        "aligned_ssim": 0.9536504683928205,
+        "aligned_psnr": 26.043219370634766,
+        "failure": 0,
+        "raw_nrmse": 0.7119462045851359,
+        "support_iou": 0.9823911028730306,
+        "boundary_f1": 0.9478672985781992,
+        "dy": -2,
+        "dx": 7,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 0.09803209015284219,
+        "aligned_ssim": 0.9536503541536585,
+        "aligned_psnr": 26.043175579500332,
+        "failure": 0,
+        "raw_nrmse": 0.7119463200830727,
+        "support_iou": 0.9823911028730306,
+        "boundary_f1": 0.9478672985781992,
+        "dy": -2,
+        "dx": 7,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.3336790085516039,
+        "valid_flux_relative_error": 5.838284342094052e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.33367909163995146,
+        "valid_flux_relative_error": 1.335816843115191e-07
+      },
+      "nrmse_increase": 4.942413265318635e-07,
+      "ssim_loss": 1.1423916201902529e-07,
+      "psnr_loss": 4.379113443420124e-05,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0007__corrected_p10000_b48",
+      "base_id": 7,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      },
+      "reference": {
+        "aligned_nrmse": 8.13613849219356,
+        "aligned_ssim": 0.3200755629220182,
+        "aligned_psnr": -12.33782582250154,
+        "failure": 1,
+        "raw_nrmse": 8.297026498552343,
+        "support_iou": 0.6227967097532315,
+        "boundary_f1": 0.17100371747211895,
+        "dy": 1,
+        "dx": -9,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 8.13613849219356,
+        "aligned_ssim": 0.3200755629220182,
+        "aligned_psnr": -12.33782582250154,
+        "failure": 1,
+        "raw_nrmse": 8.297026498552343,
+        "support_iou": 0.6227967097532315,
+        "boundary_f1": 0.17100371747211895,
+        "dy": 1,
+        "dx": -9,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.0978380096767344,
+        "valid_flux_relative_error": 8.097624888296924e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.0978380096767344,
+        "valid_flux_relative_error": 8.097624888296924e-08
+      },
+      "nrmse_increase": 0.0,
+      "ssim_loss": 0.0,
+      "psnr_loss": 0.0,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0008__corrected_p1000000_b16",
+      "base_id": 8,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 3.725290298461914e-08,
+        "max_relative": 2.87151992469804e-05,
+        "relative_l2": 1.3449602056157515e-07,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.042118163354556315,
+        "aligned_ssim": 0.9899597544590722,
+        "aligned_psnr": 37.55966075432409,
+        "failure": 0,
+        "raw_nrmse": 0.5596576550353478,
+        "support_iou": 1.0,
+        "boundary_f1": 1.0,
+        "dy": 3,
+        "dx": -1,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 0.042118127241940945,
+        "aligned_ssim": 0.9899597722425267,
+        "aligned_psnr": 37.559668201712604,
+        "failure": 0,
+        "raw_nrmse": 0.5596576404422032,
+        "support_iou": 1.0,
+        "boundary_f1": 1.0,
+        "dy": 3,
+        "dx": -1,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.263783412389798,
+        "valid_flux_relative_error": 3.2758127195381555e-09
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.26378340663150135,
+        "valid_flux_relative_error": 6.80546499749179e-08
+      },
+      "nrmse_increase": -3.6112615370287315e-08,
+      "ssim_loss": -1.7783454486774986e-08,
+      "psnr_loss": -7.447388512105135e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0008__corrected_p10000_b48",
+      "base_id": 8,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.3634562492370605e-06,
+        "max_relative": 7.607796417016374e-05,
+        "relative_l2": 1.3486987158432156e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 7.682512561919989,
+        "aligned_ssim": 0.40702567149618235,
+        "aligned_psnr": -7.661016333622543,
+        "failure": 1,
+        "raw_nrmse": 7.716095271723093,
+        "support_iou": 0.2568167406467977,
+        "boundary_f1": 0.06374501992031872,
+        "dy": 1,
+        "dx": 2,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 7.682512920319537,
+        "aligned_ssim": 0.40702568351273277,
+        "aligned_psnr": -7.661016738830973,
+        "failure": 1,
+        "raw_nrmse": 7.7160956298737,
+        "support_iou": 0.2568167406467977,
+        "boundary_f1": 0.06374501992031872,
+        "dy": 1,
+        "dx": 2,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.0964339389279838,
+        "valid_flux_relative_error": 2.3201384792505098e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.096434081162904,
+        "valid_flux_relative_error": 2.8104094276009377e-08
+      },
+      "nrmse_increase": 3.583995482614455e-07,
+      "ssim_loss": -1.2016550421378724e-08,
+      "psnr_loss": 4.052084303651782e-07,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0009__corrected_p1000000_b16",
+      "base_id": 9,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 6.705522537231445e-07,
+        "max_relative": 4.186420532345235e-05,
+        "relative_l2": 7.782779720729213e-07,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.16123819219553268,
+        "aligned_ssim": 0.9583291765432695,
+        "aligned_psnr": 25.549751683418375,
+        "failure": 0,
+        "raw_nrmse": 0.8118619384676355,
+        "support_iou": 0.9590909090909091,
+        "boundary_f1": 0.761904761904762,
+        "dy": 0,
+        "dx": -5,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 0.1612383396254936,
+        "aligned_ssim": 0.9583291978217517,
+        "aligned_psnr": 25.54974374138078,
+        "failure": 0,
+        "raw_nrmse": 0.8118620816708773,
+        "support_iou": 0.9590909090909091,
+        "boundary_f1": 0.761904761904762,
+        "dy": 0,
+        "dx": -5,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.31621288635839107,
+        "valid_flux_relative_error": 8.245121947509909e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.31621294500858493,
+        "valid_flux_relative_error": 1.3216055094709173e-08
+      },
+      "nrmse_increase": 1.4742996093386473e-07,
+      "ssim_loss": -2.127848219846129e-08,
+      "psnr_loss": 7.942037594688145e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0009__corrected_p10000_b48",
+      "base_id": 9,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.4901161193847656e-08,
+        "max_relative": 2.378681023751011e-07,
+        "relative_l2": 1.464192541100666e-07,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 8.416724996576383,
+        "aligned_ssim": 0.3354782252187687,
+        "aligned_psnr": -8.803752631747448,
+        "failure": 1,
+        "raw_nrmse": 8.541866874690477,
+        "support_iou": 0.3971119133574007,
+        "boundary_f1": 0.0,
+        "dy": 3,
+        "dx": 5,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 8.41672371092949,
+        "aligned_ssim": 0.3354782306025346,
+        "aligned_psnr": -8.80375130498581,
+        "failure": 1,
+        "raw_nrmse": 8.541865589903765,
+        "support_iou": 0.3971119133574007,
+        "boundary_f1": 0.0,
+        "dy": 3,
+        "dx": 5,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.1490582882755949,
+        "valid_flux_relative_error": 2.1245319859824003e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.1490582096085418,
+        "valid_flux_relative_error": 6.06858721206403e-08
+      },
+      "nrmse_increase": -1.285646892057457e-06,
+      "ssim_loss": -5.383765933064666e-09,
+      "psnr_loss": -1.3267616392198534e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0011__corrected_p1000000_b16",
+      "base_id": 11,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.2714415788650513e-05,
+        "max_relative": 0.0003167931170358657,
+        "relative_l2": 1.2897524657655085e-05,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.17239252199317684,
+        "aligned_ssim": 0.9250109963998938,
+        "aligned_psnr": 25.186177845906684,
+        "failure": 0,
+        "raw_nrmse": 0.5876559772690051,
+        "support_iou": 0.9780380673499268,
+        "boundary_f1": 1.0,
+        "dy": -2,
+        "dx": -6,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 0.17239750588074906,
+        "aligned_ssim": 0.9250093280636358,
+        "aligned_psnr": 25.185926739471324,
+        "failure": 0,
+        "raw_nrmse": 0.5876557423484784,
+        "support_iou": 0.9780380673499268,
+        "boundary_f1": 1.0,
+        "dy": -2,
+        "dx": -6,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.30451845366933133,
+        "valid_flux_relative_error": 1.595252510256395e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.3045186789439837,
+        "valid_flux_relative_error": 2.423462288451266e-08
+      },
+      "nrmse_increase": 4.983887572224122e-06,
+      "ssim_loss": 1.668336258031644e-06,
+      "psnr_loss": 0.00025110643536052635,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0011__corrected_p10000_b48",
+      "base_id": 11,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.646578311920166e-06,
+        "max_relative": 0.00013970564568319827,
+        "relative_l2": 2.1865365043073192e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 8.642978493886675,
+        "aligned_ssim": 0.36518190089379243,
+        "aligned_psnr": -8.816722152428722,
+        "failure": 1,
+        "raw_nrmse": 8.734079325726928,
+        "support_iou": 0.40792682926829266,
+        "boundary_f1": 0.0,
+        "dy": -3,
+        "dx": 4,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 8.642973474771123,
+        "aligned_ssim": 0.36518206283092375,
+        "aligned_psnr": -8.816717108392517,
+        "failure": 1,
+        "raw_nrmse": 8.734074498616112,
+        "support_iou": 0.40792682926829266,
+        "boundary_f1": 0.0,
+        "dy": -3,
+        "dx": 4,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.127512313938416,
+        "valid_flux_relative_error": 2.2306681644898322e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.1275117738410045,
+        "valid_flux_relative_error": 3.394084974878911e-08
+      },
+      "nrmse_increase": -5.019115551618825e-06,
+      "ssim_loss": -1.619371313155149e-07,
+      "psnr_loss": -5.044036205603675e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0030__corrected_p1000000_b16",
+      "base_id": 30,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 3.166496753692627e-06,
+        "max_relative": 0.00011199275895023157,
+        "relative_l2": 2.8381929469350115e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.37569368289244826,
+        "aligned_ssim": 0.7324228691410033,
+        "aligned_psnr": 13.193650326294556,
+        "failure": 0,
+        "raw_nrmse": 0.8933478336868922,
+        "support_iou": 0.8503985285101165,
+        "boundary_f1": 0.5786863069292049,
+        "dy": 3,
+        "dx": -10,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 0.3756936989780211,
+        "aligned_ssim": 0.7324227964423119,
+        "aligned_psnr": 13.19364995440247,
+        "failure": 0,
+        "raw_nrmse": 0.8933477891464766,
+        "support_iou": 0.8503985285101165,
+        "boundary_f1": 0.5786863069292049,
+        "dy": 3,
+        "dx": -10,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.47624024168958495,
+        "valid_flux_relative_error": 1.7841391893801754e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.47624033269688193,
+        "valid_flux_relative_error": 2.0351838765323187e-07
+      },
+      "nrmse_increase": 1.6085572818180793e-08,
+      "ssim_loss": 7.269869140014151e-08,
+      "psnr_loss": 3.7189208512700134e-07,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0030__corrected_p10000_b48",
+      "base_id": 30,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 7.450580596923828e-09,
+        "max_relative": 1.3373336549174995e-07,
+        "relative_l2": 7.962062770675044e-08,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 7.95130702069145,
+        "aligned_ssim": 0.3470629910731338,
+        "aligned_psnr": -13.318442280713892,
+        "failure": 1,
+        "raw_nrmse": 8.172441847599648,
+        "support_iou": 0.8142688679245284,
+        "boundary_f1": 0.45666570688165853,
+        "dy": 0,
+        "dx": 11,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 7.951306415097248,
+        "aligned_ssim": 0.3470629953078282,
+        "aligned_psnr": -13.318441619171757,
+        "failure": 1,
+        "raw_nrmse": 8.172441243530576,
+        "support_iou": 0.8142688679245284,
+        "boundary_f1": 0.45666570688165853,
+        "dy": 0,
+        "dx": 11,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.1405164218731008,
+        "valid_flux_relative_error": 1.7596546196284308e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.1405163852852076,
+        "valid_flux_relative_error": 3.855156716749495e-08
+      },
+      "nrmse_increase": -6.055942023408534e-07,
+      "ssim_loss": -4.2346943729398845e-09,
+      "psnr_loss": -6.61542134849924e-07,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0031__corrected_p1000000_b16",
+      "base_id": 31,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 3.725290298461914e-08,
+        "max_relative": 3.239041056278208e-05,
+        "relative_l2": 9.76971735805772e-08,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.03887866651680211,
+        "aligned_ssim": 0.9889236536687225,
+        "aligned_psnr": 36.01707532452629,
+        "failure": 0,
+        "raw_nrmse": 0.7210193971551445,
+        "support_iou": 1.0,
+        "boundary_f1": 1.0,
+        "dy": -3,
+        "dx": 7,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 0.03887870495768809,
+        "aligned_ssim": 0.9889236430190175,
+        "aligned_psnr": 36.01706673644552,
+        "failure": 0,
+        "raw_nrmse": 0.7210194181394364,
+        "support_iou": 1.0,
+        "boundary_f1": 1.0,
+        "dy": -3,
+        "dx": 7,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.285387955992742,
+        "valid_flux_relative_error": 3.458287082297287e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.28538796197278876,
+        "valid_flux_relative_error": 4.229397921481942e-07
+      },
+      "nrmse_increase": 3.8440885981316786e-08,
+      "ssim_loss": 1.0649705006748889e-08,
+      "psnr_loss": 8.588080767424344e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0031__corrected_p10000_b48",
+      "base_id": 31,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 9.462237358093262e-07,
+        "max_relative": 9.802130792396323e-05,
+        "relative_l2": 1.638459239831407e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 7.843034635956899,
+        "aligned_ssim": 0.3332356332889908,
+        "aligned_psnr": -10.078380117403913,
+        "failure": 1,
+        "raw_nrmse": 7.948997853501454,
+        "support_iou": 0.4121580547112462,
+        "boundary_f1": 0.06451612903225806,
+        "dy": -1,
+        "dx": -8,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 7.843031221674693,
+        "aligned_ssim": 0.33323568086418887,
+        "aligned_psnr": -10.078376336203617,
+        "failure": 1,
+        "raw_nrmse": 7.94899441462065,
+        "support_iou": 0.4121580547112462,
+        "boundary_f1": 0.06451612903225806,
+        "dy": -1,
+        "dx": -8,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 1.1104304476566296,
+        "valid_flux_relative_error": 1.42182215665812e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 1.1104303575362666,
+        "valid_flux_relative_error": 1.5602127951685865e-07
+      },
+      "nrmse_increase": -3.414282206293251e-06,
+      "ssim_loss": -4.7575198058869006e-08,
+      "psnr_loss": -3.7812002968706793e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0006__corrected_p10000000_b0",
+      "base_id": 6,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 4.783272743225098e-06,
+        "max_relative": 4.0229806897638926e-05,
+        "relative_l2": 9.420323280467595e-07,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.20626962423544182,
+        "aligned_ssim": 0.904701846336785,
+        "aligned_psnr": 21.026758008383865,
+        "failure": 0,
+        "raw_nrmse": 0.7469889518271688,
+        "support_iou": 0.9506953223767383,
+        "boundary_f1": 0.8991147955599269,
+        "dy": 2,
+        "dx": 7,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 0.20626938788443155,
+        "aligned_ssim": 0.904701901671757,
+        "aligned_psnr": 21.026767960988252,
+        "failure": 0,
+        "raw_nrmse": 0.7469889851500997,
+        "support_iou": 0.9506953223767383,
+        "boundary_f1": 0.8991147955599269,
+        "dy": 2,
+        "dx": 7,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.1248363420912328,
+        "valid_flux_relative_error": 7.6230285161242e-09
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.12483626664358204,
+        "valid_flux_relative_error": 1.3223960984861733e-07
+      },
+      "nrmse_increase": -2.363510102632027e-07,
+      "ssim_loss": -5.533497204890381e-08,
+      "psnr_loss": -9.952604386853636e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0007__corrected_p100000_b32",
+      "base_id": 7,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 1.0952353477478027e-06,
+        "max_relative": 8.372233770504655e-05,
+        "relative_l2": 1.286705215445045e-06,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 1.4300779798313745,
+        "aligned_ssim": 0.5688442969937941,
+        "aligned_psnr": 2.7633464373495853,
+        "failure": 1,
+        "raw_nrmse": 1.7007046904289995,
+        "support_iou": 0.8132205995388163,
+        "boundary_f1": 0.5383022774327123,
+        "dy": -2,
+        "dx": 7,
+        "inverted": false
+      },
+      "candidate": {
+        "aligned_nrmse": 1.4300782829120138,
+        "aligned_ssim": 0.5688442963701189,
+        "aligned_psnr": 2.7633445965236008,
+        "failure": 1,
+        "raw_nrmse": 1.700705079310659,
+        "support_iou": 0.8132205995388163,
+        "boundary_f1": 0.5383022774327123,
+        "dy": -2,
+        "dx": 7,
+        "inverted": false
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.9337816140041978,
+        "valid_flux_relative_error": 1.6044321814505312e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.9337816085206706,
+        "valid_flux_relative_error": 2.423743018271967e-07
+      },
+      "nrmse_increase": 3.0308063925232887e-07,
+      "ssim_loss": 6.236752225774467e-10,
+      "psnr_loss": 1.8408259845337227e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0008__stress_2_random_gaps",
+      "base_id": 8,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      },
+      "reference": {
+        "aligned_nrmse": 0.047186402735942164,
+        "aligned_ssim": 0.9869717549122321,
+        "aligned_psnr": 36.57271184582096,
+        "failure": 0,
+        "raw_nrmse": 0.5592459530204666,
+        "support_iou": 1.0,
+        "boundary_f1": 1.0,
+        "dy": 3,
+        "dx": -1,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 0.047186402735942164,
+        "aligned_ssim": 0.9869717549122321,
+        "aligned_psnr": 36.57271184582096,
+        "failure": 0,
+        "raw_nrmse": 0.5592459530204666,
+        "support_iou": 1.0,
+        "boundary_f1": 1.0,
+        "dy": 3,
+        "dx": -1,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.2658415368077071,
+        "valid_flux_relative_error": 2.1382707456450772e-08
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.2658415368077071,
+        "valid_flux_relative_error": 2.1382707456450772e-08
+      },
+      "nrmse_increase": 0.0,
+      "ssim_loss": 0.0,
+      "psnr_loss": 0.0,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    },
+    {
+      "sample_id": "b0009__legacy_p1000000_b16",
+      "base_id": 9,
+      "parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 8.046627044677734e-07,
+        "max_relative": 3.476422100850718e-05,
+        "relative_l2": 7.64143529877318e-07,
+        "bitwise": false
+      },
+      "reference": {
+        "aligned_nrmse": 0.17059019950570425,
+        "aligned_ssim": 0.9540114179713987,
+        "aligned_psnr": 25.060028545132745,
+        "failure": 0,
+        "raw_nrmse": 0.8124865187899997,
+        "support_iou": 0.9515151515151515,
+        "boundary_f1": 0.761904761904762,
+        "dy": 0,
+        "dx": -5,
+        "inverted": true
+      },
+      "candidate": {
+        "aligned_nrmse": 0.17059026842058111,
+        "aligned_ssim": 0.9540113963162683,
+        "aligned_psnr": 25.060025036215492,
+        "failure": 0,
+        "raw_nrmse": 0.8124865229017835,
+        "support_iou": 0.9515151515151515,
+        "boundary_f1": 0.761904761904762,
+        "dy": 0,
+        "dx": -5,
+        "inverted": true
+      },
+      "physics_reference": {
+        "valid_amplitude_residual": 0.3253970664107941,
+        "valid_flux_relative_error": 1.4592121360094264e-07
+      },
+      "physics_candidate": {
+        "valid_amplitude_residual": 0.325397063297292,
+        "valid_flux_relative_error": 4.623903608233855e-09
+      },
+      "nrmse_increase": 6.891487686067066e-08,
+      "ssim_loss": 2.1655130355568986e-08,
+      "psnr_loss": 3.5089172527591472e-06,
+      "support_iou_loss": 0.0,
+      "boundary_f1_loss": 0.0,
+      "new_failure": false,
+      "gate_pass": true,
+      "archived_reference_parity": {
+        "allclose": true,
+        "finite": true,
+        "shape": [
+          64,
+          64
+        ],
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true
+      }
+    }
+  ]
+}

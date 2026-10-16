@@ -1,0 +1,394 @@
+{
+  "passed": true,
+  "verification_executed": true,
+  "failures": [],
+  "checks": {
+    "git_state": {
+      "passed": true,
+      "details": {
+        "branch": "docs/publish-verified-cpu-results",
+        "head": "3d5719dc7940c43298769e5a963501ba3b47f358",
+        "status": "?? docs/RELEASE_VERIFICATION.md\n?? docs/superpowers/\n?? scripts/TODO.md\n?? scripts/protected_files.json\n?? scripts/release_audit.py\n?? scripts/todo.py\n?? tests/test_publication.py"
+      }
+    },
+    "protected_hashes": {
+      "passed": true,
+      "details": {
+        "checked": 95,
+        "mismatches": []
+      }
+    },
+    "checkpoint": {
+      "passed": true,
+      "details": "823572aa0c4bc973acf149734b79833cb9fccf708aad23426373b8c62b5dc379"
+    },
+    "manifest_statistics_quality": {
+      "passed": true,
+      "details": {
+        "source_records": 22,
+        "paired_experiments": [
+          {
+            "experiment_id": "fixed_t6_p_only_repeat72_v1",
+            "label": "Six P cores",
+            "decision": "accepted configuration",
+            "baseline_median_s": 0.77705005,
+            "baseline_p95_s": 0.9014439250000001,
+            "candidate_median_s": 0.70511025,
+            "candidate_p95_s": 0.879229935,
+            "speedup": 1.1020263143246039,
+            "median_pair_ratio": 1.0781088407805868,
+            "ci_low": 1.067680900175441,
+            "ci_high": 1.1295978658924664,
+            "pairs": 72,
+            "bootstrap_seed": 2026101601,
+            "bootstrap_draws": 5000,
+            "bootstrap_block": 6,
+            "estimator": "ratio_of_paired_arm_medians",
+            "quality_pass": true,
+            "summary_sha256": "eb01869162bdab20b284d7a5f302e2ef47533ba1d9993e365fcab579a0dcd957",
+            "timings_sha256": "b26b7f1d5036ca194e38b21061e7782b146ddc8dddd6d1575b6abc7e73c825be"
+          },
+          {
+            "experiment_id": "phase2_compile_selective_screen_20261016_v4",
+            "label": "Selective Inductor",
+            "decision": "quality passed; no detectable gain",
+            "baseline_median_s": 2.87469395,
+            "baseline_p95_s": 3.978786475,
+            "candidate_median_s": 3.11103285,
+            "candidate_p95_s": 3.7519853500000004,
+            "speedup": 0.9240320139981808,
+            "median_pair_ratio": 0.9211610593651005,
+            "ci_low": 0.7286737668640134,
+            "ci_high": 1.0381269505095112,
+            "pairs": 36,
+            "bootstrap_seed": 2026101601,
+            "bootstrap_draws": 5000,
+            "bootstrap_block": 6,
+            "estimator": "ratio_of_paired_arm_medians",
+            "quality_pass": true,
+            "summary_sha256": "45d352d84967596a7bf0ff971d09b828717476ccfc4a0f0eb1e07f410c82e74b",
+            "timings_sha256": "0af53ee5096635ccc9ada07663696e301cdd50280ee143568a2bd1f7c6ad4d89"
+          },
+          {
+            "experiment_id": "phase2_compile_default_screen_20261016_v5",
+            "label": "Full Inductor",
+            "decision": "strict numerical parity failed",
+            "baseline_median_s": 1.5916748,
+            "baseline_p95_s": 1.7974967250000002,
+            "candidate_median_s": 1.7066667,
+            "candidate_p95_s": 1.9824630250000002,
+            "speedup": 0.9326219349097279,
+            "median_pair_ratio": 0.9349687868943118,
+            "ci_low": 0.9068139086072561,
+            "ci_high": 0.9715197448829642,
+            "pairs": 36,
+            "bootstrap_seed": 2026101601,
+            "bootstrap_draws": 5000,
+            "bootstrap_block": 6,
+            "estimator": "ratio_of_paired_arm_medians",
+            "quality_pass": false,
+            "summary_sha256": "9b9d638f63d1c1a6e31e4c3bec605714a5a205ca79e8b75b26385dd8b08b6f20",
+            "timings_sha256": "cee201b78ea75fd5d659af05cbfbf0961f919df35211227693fab8d3fab7979c"
+          }
+        ],
+        "profile": {
+          "experiment_id": "profile_v2",
+          "convolution_percent": 42.6046552063173,
+          "fft_percent": 2.288270908582735,
+          "remaining_percent": 55.10707388509997,
+          "self_cpu_total_us": 2415575.0,
+          "summary_sha256": "11ed3a98ae276806bee8f1642e0e72d52bc36bacb594250c52eedefa3e59f68a",
+          "operators_sha256": "e5e41638e1aee22ccbe0a548c73e403d3cfd821a81e6c86bc25a0c421445219e"
+        },
+        "unavailable_archive_references": "Original campaign/source ZIP hashes identify preserved local records; not all are public."
+      }
+    },
+    "convolution_claims_raw_replay": {
+      "passed": true,
+      "details": {
+        "primitive_cohorts_replayed": 80,
+        "prototype_rows": 8,
+        "strict_fp32_passing_prototype": "tiled (tile-16)",
+        "all_prototypes_slower": true
+      }
+    },
+    "readme_claims": {
+      "passed": true,
+      "details": {
+        "claims_match_source_precision": true,
+        "full_compile_failing_cases": 2,
+        "violating_pixels": 11
+      }
+    },
+    "figure_data_consistency": {
+      "passed": true,
+      "details": "CSV exactly matches verified source-derived table"
+    },
+    "figure_metadata": {
+      "passed": true,
+      "details": {
+        "png_size": [
+          4296,
+          2130
+        ],
+        "png_dpi": [
+          599.9988,
+          599.9988
+        ],
+        "pdf_width_points": 515.52,
+        "embedded_truetype": true,
+        "vector_paths": true,
+        "chart_raster_images": false,
+        "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+        "all_fonts_embedded": true
+      }
+    },
+    "preserved_gif": {
+      "passed": true,
+      "details": {
+        "frames": 5,
+        "loop": 0,
+        "duration_ms": [
+          2000,
+          2000,
+          2000,
+          2000,
+          2000
+        ],
+        "bytes": 285364,
+        "historical_bytes_preserved": true
+      }
+    },
+    "readme_links": {
+      "passed": true,
+      "details": []
+    },
+    "markdown_commands": {
+      "passed": true,
+      "details": {
+        "script_targets_checked": [
+          "cpu_study/reproduce.py",
+          "cpu_study/plot.py",
+          "cpu_study/plot.py",
+          "cpu_study/animate.py",
+          "cpu_study/plot_cpu_update.py",
+          "scripts/release_audit.py"
+        ],
+        "python_example_compiled": true,
+        "dependency_installs": "Documented recipe; wheel install separately verified without re-downloading dependencies."
+      }
+    },
+    "cache_and_large_files": {
+      "passed": true,
+      "details": {
+        "tracked_caches": [],
+        "large_files": [
+          {
+            "path": "cpu_optimization/config/development_inputs.npz",
+            "bytes": 17798487
+          },
+          {
+            "path": "pretrained/param_dpr0.pt",
+            "bytes": 61316059
+          },
+          {
+            "path": "pretrained/param_dpr1.pt",
+            "bytes": 61316059
+          }
+        ],
+        "file_count": 212,
+        "total_working_file_bytes": 157837401
+      }
+    },
+    "credentials_and_portability": {
+      "passed": true,
+      "details": {
+        "credential_pattern_hits": [],
+        "accidental_absolute_paths": [],
+        "intentional_immutable_provenance_path_files": [
+          "cpu_optimization/config/development_provenance.json",
+          "cpu_optimization/config/environment_primary_packages.json",
+          "cpu_optimization/config/environment_secondary_packages.json",
+          "cpu_optimization/config/external_source.json",
+          "cpu_optimization/config/selection.json",
+          "cpu_study/evidence/config/selection.json"
+        ],
+        "scope": "Pattern scan of release text, not proof that no credential exists in all history."
+      }
+    },
+    "license_citation": {
+      "passed": true,
+      "details": "Original license hashes covered by protected manifest; original DPR BibTeX and attribution table retained"
+    },
+    "figure_and_model_reproduction": {
+      "passed": true,
+      "details": {
+        "commands": [
+          [
+            "cpu_study/plot.py",
+            "--figure",
+            "main"
+          ],
+          [
+            "cpu_study/plot.py",
+            "--figure",
+            "diagnostics"
+          ],
+          [
+            "cpu_study/animate.py"
+          ],
+          [
+            "cpu_study/reproduce.py",
+            "--all"
+          ]
+        ],
+        "new_update_pixels_identical": true,
+        "new_pdf_content_identical": true,
+        "historical_outputs_generated_in_temporary_copy": true
+      }
+    },
+    "scoped_tests": {
+      "passed": true,
+      "details": "150 passed in 23.71s"
+    },
+    "original_regression_separate": {
+      "passed": true,
+      "details": {
+        "classification": "known inherited network_synthetic failure",
+        "summary": "1 failed, 14 passed, 5 skipped, 4 xfailed, 1 warning in 48.38s",
+        "tolerance_unchanged": true
+      }
+    },
+    "installed_package_inference": {
+      "passed": true,
+      "details": {
+        "wheel_sha256": "d5a671c27d90b6fe5a09fae0904bb55c3c5bd3199c1aed6fd8acde1b0a630408",
+        "inference": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "float32",
+          "max_abs": 0.0,
+          "installed_imports": true
+        },
+        "dependencies": "Existing pinned environment reused; no clean-machine dependency-resolution claim."
+      }
+    }
+  },
+  "tested_source_sha256": {
+    "cpu_optimization/__init__.py": "631e2c2eb58425efc10c8d10ad99115f090e2dd716e675f4ae86d0b3f273eadd",
+    "cpu_optimization/api.py": "3a96e18884e323b3bf3d771101393c35570de5116d98867e6c74b4dad6c225d3",
+    "cpu_optimization/benchmarks/__init__.py": "6a2d477faedd2be8b48f7e1b5ee4ca4e644ea0cdc4526a3cc8d0703dcfc35183",
+    "cpu_optimization/benchmarks/baseline.py": "2b1abe081d1598f9025327ee4fd7a00aba93994782f531fb89477131cb877792",
+    "cpu_optimization/benchmarks/common.py": "d747d336482beffa170244029bd47ae61a7b76a3f827beb1c05da1d6e6f2bb27",
+    "cpu_optimization/benchmarks/compare.py": "e91a23390e1659e7f10fb3be357a0533c38891f0b6d79c4db35179d7c865c5fb",
+    "cpu_optimization/benchmarks/compiler_graphs.py": "d947477835a6b02d941f601a2b788e5d18007d056298ee0529580d2aa332c2f6",
+    "cpu_optimization/benchmarks/fft.py": "3a751606d4a7cb2ba8c0306ed2599bc1cf00c313380643784717f960b61bcf72",
+    "cpu_optimization/benchmarks/profile.py": "2a0a356e004dbc1bd36492cd67f4198f3613a51c5137c2cbea1b08e51e1cf5c2",
+    "cpu_optimization/benchmarks/spectral.py": "12b21f1f0fff1b80116b4af31fb457139c2d9d69c673e93b1a6be7f53a8655ec",
+    "cpu_optimization/benchmarks/summarize.py": "85594383d28ffc0269a708a1528c75d7cb18c795fa92b1c7073b0e53d6307023",
+    "cpu_optimization/benchmarks/threading.py": "67be5ce8033ee2469ad5e28d40ee84d40a4e1b611ca165bd44f4c7a9bc97175e",
+    "cpu_optimization/benchmarks/throughput.py": "fc268e1d85c1c4368cd9b18d139db482409f2b9628b510c09a4637a2aaa8cd81",
+    "cpu_optimization/benchmarks/validate.py": "8050439cdfd2c33a28c1c08a03a881799a3fc2e51e43556f653cb274de39968d",
+    "cpu_optimization/candidates/__init__.py": "ee8d01ef378d265ee911707058fe3672ff226e578204df701ed766d1106d3aa4",
+    "cpu_optimization/candidates/compiler.py": "b3b341fc5a6c66e4d7332de62162d51178f2686bfec7031c2c062c6bb72e74c2",
+    "cpu_optimization/candidates/layout.py": "18b031a791915f62ae65cf7ab813ce9e9ad2affdef1373c44c6bbaa37a7299b0",
+    "cpu_optimization/candidates/spectral.py": "08fe810ab3512b263d6e5acb6720009b0b127915d9453fd6117598c4c6457195",
+    "cpu_optimization/fft/__init__.py": "a05d1aa889d89297db35a89dd475ff8802c4347ffab1865949eb488056de9c49",
+    "cpu_optimization/fft/plans.py": "7a188fdfc40b3dd82e34dfc389f7a89f4def393eb58da722a5af60630e01bae9",
+    "cpu_optimization/phase2_extension/__init__.py": "5a0adcae9ec495ea8be02fe4078a5a715626861495872dc90360f299710cd891",
+    "cpu_optimization/phase2_extension/convs.py": "b6874f9659236bee5dea6e567a0242e5510b47175f2dae930614256bc9b524e3",
+    "cpu_optimization/phase2_extension/evidence.py": "a89bbdf746f8ffa089be02c3010d499df61ef8d6896dc3c6e7653347f10c3080",
+    "cpu_optimization/phase2_extension/integrity.py": "04c3f399363bc78ad7a3bfed73d5261010bcd679d1659a550ff55cc88a2d3fe6",
+    "cpu_optimization/phase2_extension/prototypes.py": "6a22be362f651393e98edcd15d70ddb427b5298006cf72f657c8700136aeb920",
+    "cpu_optimization/phase2_extension/reporting.py": "1f3aa741952ed54489a16a2b05919ec1a5937f1438ba13ab0ae845e58bfc0942",
+    "cpu_optimization/phase2_extension/run_after_pilot.py": "4cbc5f990ca5214701b5c144be152f8bce5c485625f8ff48b7385e64ba790da8",
+    "cpu_optimization/phase2_extension/toolchain.py": "63f639f5486e39c39621dc16ec5f2b4eccda0823317f6aeff5961bba8e83be6b",
+    "cpu_optimization/phase2_extension/verbose.py": "4364f86eac43f1f24bc031e80c85af4ca8bc07b98da5b26ded880fc25faa3ee4",
+    "cpu_optimization/phase2_extension/verify_presentation.py": "758026c909fc6a673c34bd6b03425b7afd99483a4c09ab850478fc24d429867f",
+    "cpu_optimization/phase2_extension/verify_release.py": "a202721af657f9ab84c65c0f1e3a4d625e6e3f3f5acead4fe583b259459b168b",
+    "cpu_optimization/quality.py": "35cfd6a50a7b9b8bb98f742f09655032bb164188f66d3b485412b32b1ce8726b",
+    "cpu_optimization/scripts/__init__.py": "8141467a6fbe92fe13f83e234042c897fc4df8b4b18631f7518165a5443d418e",
+    "cpu_optimization/scripts/archive_validation.py": "1e247060ebab62ea9530e9d627af26893e48fa7641e73e647be175b61592376f",
+    "cpu_optimization/scripts/audit.py": "fefcb76ca7ba6264fa40e88f8f987f52e318e6060061a77c252b7703ed3c4ddf",
+    "cpu_optimization/scripts/campaign.py": "1ba704682df33f5cea726973e554d9bb3378f4cb224da945ebb81266b074e8a0",
+    "cpu_optimization/scripts/capture_packages.py": "67e96ae38fa632321072e1c2bf929e10c2969317ccc9300ea38bbe236b0693f3",
+    "cpu_optimization/scripts/check_figures.py": "d525108a3ca31cd65b04e1b306d779016f3ea9687f32d14b3174985d48e31e93",
+    "cpu_optimization/scripts/lock_selection.py": "0c79d25971b8282d719f57f7b39305b0a885084d3180b63756e76cc99845bcd0",
+    "cpu_optimization/scripts/plot_results.py": "6c0a1b8e0786779b5538cda4d30822002d936fd9d7d3820d5a2a6ee490db5efd",
+    "cpu_optimization/scripts/wheel_smoke.py": "e062854baec39f58f77fa7d03531ca1bd859b8db96a02c2e2b42fe2be513cc13",
+    "cpu_optimization/statistics.py": "95217e2be7e6dd63fb12277634f194357db101468117b2d0014724ed3faa3866",
+    "cpu_optimization/tests/test_compiler.py": "bd5f0125020d8d60ae4a682a2e8245856317ccb19ba15aeb0c67cfa556b5b05c",
+    "cpu_optimization/tests/test_contracts.py": "21e3eb906288b88a5f9afd57311a3c976ba73b263cf41145f63d48d654dda0f3",
+    "cpu_optimization/tests/test_evidence.py": "2cc82f3f2d8682adde7398b03786c0dccd397bcef4430b96ec7c8ee519643aaa",
+    "cpu_optimization/tests/test_fft.py": "1f458ff1f7262f8acb21dafdcec24590b04f5c1c71536262fee3b272ee363528",
+    "cpu_optimization/tests/test_inference.py": "49895c434a14c2cc2946d9ae4d618677b84f2eeade948d34a2d0cff63cfea7f9",
+    "cpu_optimization/tests/test_local_layout.py": "aed59aeb803f6e0c40e0d23d310f85a8c754c868ef6d5295dac3d081c47e85a3",
+    "cpu_optimization/tests/test_phase2_convs.py": "47ff027e13c68d8c32b6989993012beb74984c949038c525e5787fc1341abf10",
+    "cpu_optimization/tests/test_phase2_driver.py": "4532a99187a275a011ba46762229177a9810b55d68271cda926cfbec553a6289",
+    "cpu_optimization/tests/test_phase2_evidence.py": "3215c10ad1f2ae256ea3554f4ca3663303e9b2c8399456e99792c8611cc5a014",
+    "cpu_optimization/tests/test_phase2_prototypes.py": "fc4350cca2e8229b9f00c7a88d61dba2dfec4ee13d3652035dbb0ad36251d187",
+    "cpu_optimization/tests/test_phase2_reporting.py": "69f9ee0dfbb17fb02c1658591fce2e60dca5a160d37bd22016584e1bfa823e79",
+    "cpu_optimization/tests/test_processes.py": "3c42b038a0237ad0feceb5298568b207fceb5ef7890bc6683addc4fe91bcb00a",
+    "cpu_optimization/tests/test_profile.py": "d51c689f05751f81207fc42969749e72401ab8df0ed2a716f76e0ef2e2cc569d",
+    "cpu_optimization/tests/test_reporting.py": "9c0f44c3f7bb8f3ca20246fdaab90d31a0a2025f12abe59334e41f0a79c59b2b",
+    "cpu_optimization/tests/test_review_repairs.py": "55e22dc851d53b2dde07b98238794471c4d45885ab7ef9b1faa77f74499a11d0",
+    "cpu_optimization/tests/test_selection_lock.py": "a3359d69668f6726e29171791efaff7261c44a8bf4b9904090a7a8ce83ec8ae1",
+    "cpu_optimization/tests/test_spectral_evidence.py": "c6e749f97de81800a134fc28090c551746bc3206d0b1d8f6b4efa902372e2cff",
+    "cpu_optimization/tests/test_worker_protocol.py": "508c6324e45b0406034147b31dc893f98007db5876ea586d8a086bdbd511e75e",
+    "cpu_study/animate.py": "d13b5d085718ec7fea2cd7d1a5c231cf03a34c8829caa8ef4bd6bb1dfdece61b",
+    "cpu_study/plot.py": "d7fed0bf3bffce5d4841923022cf739342320e63355bd8ece95ab3008aed534a",
+    "cpu_study/plot_cpu_update.py": "1dd6136036364f5113fc2056d00cf346910e2f5a345e2670b5477cd459028563",
+    "cpu_study/reproduce.py": "253afe47fa7871614ec7fdca466ebe11ec50aced46b4b27bcecdb1051d4273fd",
+    "deeppr/__init__.py": "b9a0dd88eb813df5d5159af82fd84457916c4e2debc575b9fac3f8559410f6ea",
+    "deeppr/asam.py": "f6ed511e8b4b32fed868225362966677e825282fe710fb26033fee1d782fabc4",
+    "deeppr/dataset.py": "019659757c4b4f5659b460b1e958d4d7c7d7a75562c32529af411269ee4d3d28",
+    "deeppr/ffc.py": "8020a5548980e96a30d5c438b326b2964169c4918db00dd385b252eaabb781d9",
+    "deeppr/loss.py": "48c70e5e90a2270f40e8f949e6b3e5d0329ed56d6bc3d204cc43b08d0cacd189",
+    "deeppr/network.py": "46de0313c5ceab9c1a772ce2f8f47b9d787b9d706140fd3bb81aac8046067886",
+    "deeppr/scheduler.py": "7ce972bbc41e435b9f07c57b3659218f60ec237e74e0dd7d200f3a8f9995d169",
+    "deeppr/weightedpartialconv2d.py": "964024403f51f946adf118da98b108ca080d2de10481a2c0b3bad6ad89dd77f0",
+    "generate_dataset.py": "e2ee83fda50792e9f03223c905fff0ab259d5bcb85bfbabca68150e4cbcb3923",
+    "pyproject.toml": "981568bf270f35a512a9c27c33f6e36fc1a47fbc7169f23d0ac298e2e8dd105e",
+    "scripts/cache_cleanup.py": "eb2ae3747ea60ab93b8f654d9088d005731f3df621764292e9bef345e35cc5bb",
+    "scripts/release_audit.py": "6ccf7b911b286d06e47520827153afb70fac393ef2ab8461a547ceb166ecc472",
+    "scripts/todo.py": "973fd4045c7e94ef133a202f6fa4597e6dcb6d87f2122819d8f8b4c9e46e9441",
+    "tests/regression/adapters/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/regression/adapters/dpr_legacy.py": "dc689f23236db961f985ba82935e9d0cbb0cf8381c677fb0e621317cbf22b6ba",
+    "tests/regression/adapters/dpr_modern.py": "3071059ad2a640c2d7e4c7d165d4fab23c5f38c34dc80186bdc8c805da18e34c",
+    "tests/regression/cases_dpr.py": "6995a12d972715e5e283d91c3df5c01aa93b7d74c6ce6158cb626ffa36cb8ad4",
+    "tests/regression/generate_f64_references.py": "c04c9e9472cab4e65b79ae0d0f39cee5127aec1082005c4e6c12e2a06fd68d3b",
+    "tests/regression/generate_references.py": "a95a94c547044a535082ced9f0d0e55f1c8ea371477e38d7f6a725e422f80f2a",
+    "tests/regression/harness.py": "5b363341c080f2ea9849702b781afd39c175c767c9c23bf8d59c297fbc8dce7e",
+    "tests/regression/test_regression.py": "aef9d63d351351b0796c1d7ab154acfb1adf25c11dec714a6ebc379e045ed8f0",
+    "tests/test_cache_cleanup.py": "a379664089af94c3101efdad8b376263441ca36f05278c7beb6257e890e9797c",
+    "tests/test_cpu_study.py": "ef9fe518be497a99e07caef4398a84ce8233a1a44d35b5126ef4d85a8e97aac3",
+    "tests/test_publication.py": "f4f1abd8dcb845575db44e3350a22930a9962b76d3eb5bf92b7d09aca7e3ec77",
+    "train.py": "79c58e97b1e65ce500e74a0bc74ccdbc00c7d0e3022356926f21aa9872eb4da5"
+  },
+  "scope": "Engineering release audit and compact-data replay, not independent scientific validation. Research 84-test suite is a separate historical result, not included in CPU test totals.",
+  "local_archive_preservation": {
+    "passed": true,
+    "files_checked": 947,
+    "bytes_checked": 249761094,
+    "mismatches": []
+  },
+  "publication_note": "Audit ran before its verification commit; tested Python/TOML source hashes bind the executed implementation. Final clean checkout/Git state is checked separately.",
+  "post_publication_index_verification": {
+    "passed": true,
+    "scoped_test_summary": "151 passed in 20.67s",
+    "index_evidence_bytes": {
+      "passed": true,
+      "details": {
+        "indexed_source_records_checked": 22,
+        "mismatches": []
+      }
+    },
+    "final_audit_source_sha256": {
+      "scripts/release_audit.py": "0715daf31d0ef05af35c32d21d73e05dd06fcfd05b89e27e88abc35cd7ef07bc",
+      "tests/test_publication.py": "968c0874754e3e98d0a53e363d98d621833dfda17d9d9bf9a5da2adfe06f5460"
+    },
+    "scope": "After a fresh-checkout check exposed prior Git EOL normalization, the index was restored to byte-preserved original evidence. Only line endings changed in archived data. An additional regression test verifies Git-index byte integrity. Full model/figure checks above preceded this final index check; scientific values and plotting code are unchanged."
+  }
+}
