@@ -1,0 +1,9 @@
+{
+  "phaseretrieval": {
+    "repository": "https://github.com/sungyun98/PhaseRetrieval.git",
+    "commit": "e844e4655af899b0bce5464cbfd32206962e977d",
+    "working_tree_clean_when_checked": true,
+    "local_source": "D:/03_Proyek/Diffraction Research/dpr-research/upstream/phase-current",
+    "scope": "Dependency resolved from unchanged local source; DPR inference itself uses deeppr/network.py helpers; no GPS refinement in prepared-network clocks"
+  }
+}

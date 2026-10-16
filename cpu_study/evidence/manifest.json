@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "trials": [
+    "fixed_t6_p_only_v1",
+    "fixed_t6_p_only_repeat72_v1",
+    "phase2_compile_selective_screen_20261016_v4",
+    "phase2_compile_default_screen_20261016_v5",
+    "final_replay_p_only_v1"
+  ],
+  "profile": "profile_v2",
+  "sources": {
+    "results/fixed_t6_p_only_v1/summary.json": {
+      "source_path": "cpu_optimization/results/fixed_t6_p_only_v1/summary.json",
+      "sha256": "0fde0fd3db584157da63b1732658584d22dbfaeed8d0322a7dae1ae84e930363",
+      "bytes": 2314,
+      "transformation": "byte-preserved"
+    },
+    "results/fixed_t6_p_only_v1/paired_timings.csv": {
+      "source_path": "cpu_optimization/results/fixed_t6_p_only_v1/paired_timings.csv",
+      "sha256": "8998886bdbd30a908f623a27c8ec7d70cb8e523c7646e4e73781b1a9ce77a96c",
+      "bytes": 3671,
+      "transformation": "byte-preserved"
+    },
+    "results/fixed_t6_p_only_v1/validation.json": {
+      "source_path": "cpu_optimization/results/fixed_t6_p_only_v1/validation.json",
+      "sha256": "381d38134eed4c72fe8ebb67abd584d4a7d62f566da7c60f89d0f043014406d9",
+      "bytes": 35606,
+      "transformation": "byte-preserved"
+    },
+    "results/fixed_t6_p_only_repeat72_v1/summary.json": {
+      "source_path": "cpu_optimization/results/fixed_t6_p_only_repeat72_v1/summary.json",
+      "sha256": "eb01869162bdab20b284d7a5f302e2ef47533ba1d9993e365fcab579a0dcd957",
+      "bytes": 2563,
+      "transformation": "byte-preserved"
+    },
+    "results/fixed_t6_p_only_repeat72_v1/paired_timings.csv": {
+      "source_path": "cpu_optimization/results/fixed_t6_p_only_repeat72_v1/paired_timings.csv",
+      "sha256": "b26b7f1d5036ca194e38b21061e7782b146ddc8dddd6d1575b6abc7e73c825be",
+      "bytes": 7338,
+      "transformation": "byte-preserved"
+    },
+    "results/fixed_t6_p_only_repeat72_v1/validation.json": {
+      "source_path": "cpu_optimization/results/fixed_t6_p_only_repeat72_v1/validation.json",
+      "sha256": "381d38134eed4c72fe8ebb67abd584d4a7d62f566da7c60f89d0f043014406d9",
+      "bytes": 35606,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_compile_selective_screen_20261016_v4/summary.json": {
+      "source_path": "cpu_optimization/results/phase2_compile_selective_screen_20261016_v4/summary.json",
+      "sha256": "45d352d84967596a7bf0ff971d09b828717476ccfc4a0f0eb1e07f410c82e74b",
+      "bytes": 2746,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_compile_selective_screen_20261016_v4/paired_timings.csv": {
+      "source_path": "cpu_optimization/results/phase2_compile_selective_screen_20261016_v4/paired_timings.csv",
+      "sha256": "0af53ee5096635ccc9ada07663696e301cdd50280ee143568a2bd1f7c6ad4d89",
+      "bytes": 3666,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_compile_selective_screen_20261016_v4/validation.json": {
+      "source_path": "cpu_optimization/results/phase2_compile_selective_screen_20261016_v4/validation.json",
+      "sha256": "d8bc72f4760600dd4a94b3d220e55753a3df92889d1b00fc4194d6fdfe359b54",
+      "bytes": 38031,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_compile_default_screen_20261016_v5/summary.json": {
+      "source_path": "cpu_optimization/results/phase2_compile_default_screen_20261016_v5/summary.json",
+      "sha256": "9b9d638f63d1c1a6e31e4c3bec605714a5a205ca79e8b75b26385dd8b08b6f20",
+      "bytes": 2748,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_compile_default_screen_20261016_v5/paired_timings.csv": {
+      "source_path": "cpu_optimization/results/phase2_compile_default_screen_20261016_v5/paired_timings.csv",
+      "sha256": "cee201b78ea75fd5d659af05cbfbf0961f919df35211227693fab8d3fab7979c",
+      "bytes": 3700,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_compile_default_screen_20261016_v5/validation.json": {
+      "source_path": "cpu_optimization/results/phase2_compile_default_screen_20261016_v5/validation.json",
+      "sha256": "4728ed772fc4e0897b6afc016f4761210576f5d2a7c3d59ff4768d98e300fe88",
+      "bytes": 38026,
+      "transformation": "byte-preserved"
+    },
+    "results/final_replay_p_only_v1/summary.json": {
+      "source_path": "cpu_optimization/results/final_replay_p_only_v1/summary.json",
+      "sha256": "6af1297d4d23ca37f3a8c6a25906aa2ee6762f4ddbefdfa26f800d371dd56b76",
+      "bytes": 790,
+      "transformation": "byte-preserved"
+    },
+    "results/final_replay_p_only_v1/validation.json": {
+      "source_path": "cpu_optimization/results/final_replay_p_only_v1/validation.json",
+      "sha256": "a360600c179f9c4272722ad5419fd3707f483414a9289d299b6fded291fe1fc7",
+      "bytes": 9720,
+      "transformation": "byte-preserved"
+    },
+    "results/profile_v2/summary.json": {
+      "source_path": "cpu_optimization/results/profile_v2/summary.json",
+      "sha256": "11ed3a98ae276806bee8f1642e0e72d52bc36bacb594250c52eedefa3e59f68a",
+      "bytes": 1294,
+      "transformation": "byte-preserved"
+    },
+    "results/profile_v2/operators.csv": {
+      "source_path": "cpu_optimization/results/profile_v2/operators.csv",
+      "sha256": "e5e41638e1aee22ccbe0a548c73e403d3cfd821a81e6c86bc25a0c421445219e",
+      "bytes": 89672,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_convs_20261016_v3/summary.json": {
+      "source_path": "cpu_optimization/results/phase2_convs_20261016_v3/summary.json",
+      "sha256": "9ffbac142d3192251b732aedd6828eb6e613a0634a42ac7bcc7f954d92af842d",
+      "bytes": 544,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_convs_20261016_v3/convs.csv": {
+      "source_path": "cpu_optimization/results/phase2_convs_20261016_v3/convs.csv",
+      "sha256": "3a2a498ea5126639a4e2cf9ef6cae937cf8cc4a247099d710983f706d6a2b599",
+      "bytes": 28269,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_convs_20261016_v3/raw_convs.csv": {
+      "source_path": "cpu_optimization/results/phase2_convs_20261016_v3/raw_convs.csv",
+      "sha256": "235645f6e9c2a201f2668150b8a40d3439960d517de635056c033aee2c8b952b",
+      "bytes": 120859,
+      "transformation": "byte-preserved"
+    },
+    "results/phase2_convs_20261016_v3/shapes.json": {
+      "source_path": "cpu_optimization/results/phase2_convs_20261016_v3/shapes.json",
+      "sha256": "b2b7be8727c4863caeae48103349d7b5044c8368b874c5a23e0791b99962480e",
+      "bytes": 29704,
+      "transformation": "byte-preserved"
+    },
+    "config/selection.json": {
+      "source_path": "cpu_optimization/config/selection.json",
+      "sha256": "b72ca63e66a3ed5fe79863deb2a4cdc2552ef0cd2c994e4758482ac4be35561e",
+      "bytes": 8297,
+      "transformation": "byte-preserved"
+    },
+    "campaign_index.json": {
+      "sha256": "67be9abf641fadf9b8c350c261f9b003f93f288d6584f6c8477c5f9ed5f2604e",
+      "transformation": "Selected command IDs, terminal status, times and summaries; absolute execution paths omitted. Original campaign hashes retained per entry."
+    }
+  },
+  "boundary": "Raw local campaign trees, source ZIPs, predictions and compiler logs are preserved locally, not fully distributed. This subset replays timing statistics and operator shares, not historical model outputs or a full population study."
+}

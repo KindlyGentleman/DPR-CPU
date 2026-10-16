@@ -1,0 +1,239 @@
+{
+  "locked_utc": "2026-10-15T23:00:28.475944+00:00",
+  "locked_before_published_replay": true,
+  "decision": "accepted replicated development configuration; final published replay still required",
+  "selected": {
+    "threads": 6,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "backend": "reference"
+  },
+  "reference": {
+    "threads": 4,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "backend": "reference"
+  },
+  "evidence_ids": [
+    "fixed_t6_p_only_v1",
+    "fixed_t6_p_only_repeat72_v1"
+  ],
+  "source_artifacts": {
+    "fixed_t6_p_only_v1": {
+      "run.json": "770e2cd188df24a00c7d77a439fd5a4d5b09f397de7e13b02f2381ac714e2e7c",
+      "summary.json": "0fde0fd3db584157da63b1732658584d22dbfaeed8d0322a7dae1ae84e930363",
+      "validation.json": "381d38134eed4c72fe8ebb67abd584d4a7d62f566da7c60f89d0f043014406d9",
+      "paired_timings.csv": "8998886bdbd30a908f623a27c8ec7d70cb8e523c7646e4e73781b1a9ce77a96c",
+      "workers.json": "a4b66f66b769cfe3123e7bebc1b72f82b2cdb41d05df8a59ac3f51fc5d515f46",
+      "source.zip": "61927c30bf5f92cdefb0e06e1f5a961ef1bc031570b91904daa79e6d0f5d316f"
+    },
+    "fixed_t6_p_only_repeat72_v1": {
+      "run.json": "8670c45ea87a1f7db9ce1e693e535454c082033d9136eeb809a158bc9dcc61f8",
+      "summary.json": "eb01869162bdab20b284d7a5f302e2ef47533ba1d9993e365fcab579a0dcd957",
+      "validation.json": "381d38134eed4c72fe8ebb67abd584d4a7d62f566da7c60f89d0f043014406d9",
+      "paired_timings.csv": "b26b7f1d5036ca194e38b21061e7782b146ddc8dddd6d1575b6abc7e73c825be",
+      "workers.json": "f6002c561c7d6117ab350d9796cfe9c53a40cb21e5dfe48ee2845da15e90a2e8",
+      "source.zip": "34179f116cbab1aefa92e2d5d8764dad99f2268c9f4f2015a83f616c938d56d9"
+    }
+  },
+  "checkpoint_sha256": "823572aa0c4bc973acf149734b79833cb9fccf708aad23426373b8c62b5dc379",
+  "protocol_sha256": "cc7f0038922b48ae3ac5d9c683703225a8e93daa0f7d23fc39b44e2dd0757dc1",
+  "development_bundle_sha256": "f854d9b772fd5c3ff1ad8e4972b31130f2a6b12b48d35c6c3befab887d71aae2",
+  "worker_environment": "OMP_NUM_THREADS=MKL_NUM_THREADS=intra_op; KMP_BLOCKTIME=0; OPENBLAS_NUM_THREADS=1",
+  "runtime": {
+    "platform": "Windows-11-10.0.22631-SP0",
+    "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+    "executable": "D:\\03_Proyek\\Diffraction Research\\DPR-CPU\\.venv-cpu-v2\\Scripts\\python.exe",
+    "versions": {
+      "torch": "2.5.1",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "scikit-image": "0.24.0",
+      "psutil": "6.0.0",
+      "pyfftw": "0.15.1",
+      "onnxruntime": null,
+      "openvino": null,
+      "SciencePlots": "2.1.1"
+    },
+    "torch_build": "PyTorch built with:\n  - C++ Version: 201703\n  - MSVC 192930154\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2.2-Product Build 20240823 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.5.3 (Git Hash 66f0cb9eb66affd2da3bf5f8d897376f04aae6af)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/builder/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /GR /EHsc /Zc:__cplusplus /bigobj /FS /utf-8 -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.5.1, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, \n",
+    "topology": {
+      "logical_count": 16,
+      "physical_count": 10,
+      "cores": [
+        {
+          "efficiency_class": 1,
+          "smt": true,
+          "logical_cpus": [
+            0,
+            1
+          ]
+        },
+        {
+          "efficiency_class": 1,
+          "smt": true,
+          "logical_cpus": [
+            2,
+            3
+          ]
+        },
+        {
+          "efficiency_class": 1,
+          "smt": true,
+          "logical_cpus": [
+            4,
+            5
+          ]
+        },
+        {
+          "efficiency_class": 1,
+          "smt": true,
+          "logical_cpus": [
+            6,
+            7
+          ]
+        },
+        {
+          "efficiency_class": 1,
+          "smt": true,
+          "logical_cpus": [
+            8,
+            9
+          ]
+        },
+        {
+          "efficiency_class": 1,
+          "smt": true,
+          "logical_cpus": [
+            10,
+            11
+          ]
+        },
+        {
+          "efficiency_class": 0,
+          "smt": false,
+          "logical_cpus": [
+            12
+          ]
+        },
+        {
+          "efficiency_class": 0,
+          "smt": false,
+          "logical_cpus": [
+            13
+          ]
+        },
+        {
+          "efficiency_class": 0,
+          "smt": false,
+          "logical_cpus": [
+            14
+          ]
+        },
+        {
+          "efficiency_class": 0,
+          "smt": false,
+          "logical_cpus": [
+            15
+          ]
+        }
+      ],
+      "interpretation": "Windows RelationProcessorCore; SMT pairs identify hybrid P cores on this CPU; efficiency classes retained verbatim"
+    },
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "intra_op": 6,
+    "inter_op": 1,
+    "power_policy": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+    "frequency": {
+      "current": 2400.0,
+      "min": 0.0,
+      "max": 2400.0
+    },
+    "temperature": null,
+    "temperature_note": "unavailable",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "6",
+      "MKL_NUM_THREADS": "6",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_PROC_BIND": null,
+      "KMP_AFFINITY": null,
+      "KMP_BLOCKTIME": "0",
+      "MKL_DYNAMIC": null,
+      "CXX": null
+    },
+    "memory": {
+      "rss": 803151872,
+      "vms": 878866432,
+      "num_page_faults": 218242,
+      "peak_wset": 803770368,
+      "wset": 803151872,
+      "peak_paged_pool": 1278672,
+      "paged_pool": 1270840,
+      "peak_nonpaged_pool": 106136,
+      "nonpaged_pool": 91912,
+      "pagefile": 878866432,
+      "peak_pagefile": 915783680,
+      "private": 878866432
+    }
+  },
+  "quality_review": {
+    "max_abs": 1.2714415788650513e-05,
+    "max_relative_l2": 1.2897524657655085e-05,
+    "max_nrmse_increase": 4.983887572224122e-06,
+    "max_ssim_loss": 1.668336258031644e-06,
+    "max_psnr_loss": 0.00025110643536052635,
+    "max_support_iou_change": 0.0,
+    "max_boundary_f1_change": 0.0,
+    "new_failures": 0,
+    "reference_failures": 8,
+    "candidate_failures": 8
+  },
+  "memory_review": {
+    "reference_worker_bytes": 804110336,
+    "candidate_worker_bytes": 804204544
+  },
+  "auto_backend": "reference; portable default remains four threads and inherited affinity",
+  "report": "**Replicated development-qualified configuration:** backend `reference`, 6 intra-op / one inter-op threads, P-only affinity [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]. Fresh 72-pair confirmation: median **0.705110s**, p95 **0.879230s**, speedup **1.102026x [1.067681, 1.129598]**, versus nearby 0.777050s median / 0.901444s p95. The gain is narrow and machine/session-specific. No component timings or historical denominator are multiplied into it.",
+  "limits": "Same-day Windows/i7-13620H/Torch2.5.1 CPU evidence, unavailable temperature; raw570 held-out arrays unavailable; five published examples only final replay; not bitwise but all strict elementwise/scientific gates pass"
+}

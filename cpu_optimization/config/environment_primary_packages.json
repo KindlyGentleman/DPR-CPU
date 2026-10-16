@@ -1,0 +1,23 @@
+{
+  "captured_utc": "2026-10-15T23:13:32.242489+00:00",
+  "executable": "D:\\03_Proyek\\Diffraction Research\\DPR-CPU\\.venv-cpu-v2\\Scripts\\python.exe",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "versions": {
+    "torch": "2.5.1",
+    "torchvision": "0.20.1",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-image": "0.24.0",
+    "pillow": "10.3.0",
+    "h5py": "3.13.0",
+    "tqdm": "4.67.1",
+    "psutil": "6.0.0",
+    "pyFFTW": "0.15.1",
+    "matplotlib": "3.9.2",
+    "SciencePlots": "2.1.1",
+    "pytest": "9.1.1",
+    "setuptools": "75.1.0"
+  },
+  "scope": "Allowlisted relevant packages after campaign; native Torch build and per-trial environment remain in run.json"
+}

@@ -1,0 +1,23 @@
+{
+  "locked_before_candidate_timing": true,
+  "track": "E",
+  "rtol": 0.0001,
+  "atol": 0.00001,
+  "max_per_case_nrmse_increase": 0.0001,
+  "max_per_case_ssim_loss": 0.0001,
+  "failure_threshold_nrmse": 0.5,
+  "new_failures_allowed": 0,
+  "minimum_speedup": 1.10,
+  "ci_low_must_exceed": 1.0,
+  "maximum_p95_ratio": 1.05,
+  "minimum_warmups": 10,
+  "minimum_pairs": 36,
+  "bootstrap": {"type": "paired circular moving-block", "block": 6, "draws": 5000, "seed": 2026101601},
+  "memory_policy": "isolated one-model peak <=1.10 reference unless justified before promotion",
+  "fresh_process_repeat_required": true,
+  "auto_backend": "reference",
+  "development": "original 18 measurements / 7 independent bases",
+  "final_replay": "five archived published examples, after selection lock",
+  "held_out_raw_570": "not bundled; original local evaluation not rerun for tuning",
+  "morphology_psnr_physics": "record all per-case metrics; human scientific review before any promotion; never infer quality from allclose alone"
+}
