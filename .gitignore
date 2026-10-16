@@ -8,6 +8,13 @@ dist/
 .pytest_cache/
 pytest-cache-files-*/
 .mplconfig/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.superpowers/
+# Full campaign output stays in the separately preserved local research archive.
+/cpu_optimization/results/
+/cpu_optimization/figures/
 cpu_study/inference*.npz
 cpu_study/inference*.json
 *.tmp
